@@ -1,11 +1,11 @@
 ﻿@model MvcCvPrroject.Models.Entity.tblYeteneklerim
 @{
-    ViewBag.Title = "YeniYetenek";
+    ViewBag.Title = "YetenekDuzenle";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <br />
-<h4>Yeni Yetenek Ekleme Sayfası</h4>
+<h4>Yetenek Düzenleme Sayfası</h4>
 <br />
 <form method="post">
     @Html.Label("Yetenek Açıklaması")
@@ -14,7 +14,6 @@
     @Html.Label("Derece")
     @Html.TextBoxFor(x => x.Oran, new { @class = "form-control" })
     <br />
-    
-    <button class="btn btn-info">Kaydet</button>
-</form>
 
+    <button class="btn btn-info">Güncelle</button>
+</form>

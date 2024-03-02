@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\DeneyimlerimController.cs" />
+    <Compile Include="Controllers\EgitimlerController.cs" />
     <Compile Include="Controllers\HakkimdaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\YeteneklerimController.cs" />
@@ -2359,6 +2360,10 @@
     <Content Include="Views\Deneyimlerim\DeneyimGetir.cshtml" />
     <Content Include="Views\Yeteneklerim\Index.cshtml" />
     <Content Include="Views\Yeteneklerim\YeniYetenek.cshtml" />
+    <Content Include="Views\Yeteneklerim\YetenekDuzenle.cshtml" />
+    <Content Include="Views\Egitimler\Index.cshtml" />
+    <Content Include="Views\Egitimler\EgitimEkle.cshtml" />
+    <Content Include="Views\Egitimler\EgitimDuzenle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
