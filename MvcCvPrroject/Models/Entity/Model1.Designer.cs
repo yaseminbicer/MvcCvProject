@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\yasemin.bicer\OneDrive - Mikro Yazılımevi Yazılım Hizmetleri Bilgisayar Sanayi ve Ticaret A.Ş\Github\cvPanel\MvcCvPrroject\MvcCvPrroject\Models\Entity\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\ROG\Documents\GitHub\MvcCvPrroject\MvcCvPrroject\Models\Entity\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

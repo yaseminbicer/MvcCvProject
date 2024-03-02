@@ -4,13 +4,13 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbCvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblAdmin">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="KullaniciAdi" Type="varchar" MaxLength="10" />
+          <Property Name="KullaniciAdi" Type="varchar" MaxLength="20" />
           <Property Name="Sifre" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="tblDeneyimlerim">
@@ -60,8 +60,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Kimden" Type="varchar" MaxLength="100" />
-          <Property Name="AdSoyad" Type="varchar" MaxLength="50" />
+          <Property Name="AdSoyad" Type="varchar" MaxLength="100" />
           <Property Name="Mail" Type="varchar" MaxLength="50" />
           <Property Name="Konu" Type="varchar" MaxLength="100" />
           <Property Name="Mesaj" Type="varchar" MaxLength="100" />
@@ -81,7 +80,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Yetenek" Type="varchar" MaxLength="100" />
         </EntityType>
-        <EntityContainer Name="dbCvModelStoreContainer">
+        <EntityContainer Name="dbModelStoreContainer">
           <EntitySet Name="tblAdmin" EntityType="Self.tblAdmin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblDeneyimlerim" EntityType="Self.tblDeneyimlerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblEgitimlerim" EntityType="Self.tblEgitimlerim" Schema="dbo" store:Type="Tables" />
@@ -95,13 +94,13 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="dbCvModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="tblAdmin">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KullaniciAdi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblDeneyimlerim">
@@ -151,8 +150,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Kimden" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Konu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Mesaj" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -172,7 +170,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Yetenek" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="dbCvEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tblAdmin" EntityType="Self.tblAdmin" />
           <EntitySet Name="tblDeneyimlerim" EntityType="Self.tblDeneyimlerim" />
           <EntitySet Name="tblEgitimlerim" EntityType="Self.tblEgitimlerim" />
@@ -187,9 +185,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="dbCvModelStoreContainer" CdmEntityContainer="dbCvEntities">
+        <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="dbEntities">
           <EntitySetMapping Name="tblAdmin">
-            <EntityTypeMapping TypeName="dbCvModel.tblAdmin">
+            <EntityTypeMapping TypeName="dbModel.tblAdmin">
               <MappingFragment StoreEntitySet="tblAdmin">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
@@ -198,7 +196,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblDeneyimlerim">
-            <EntityTypeMapping TypeName="dbCvModel.tblDeneyimlerim">
+            <EntityTypeMapping TypeName="dbModel.tblDeneyimlerim">
               <MappingFragment StoreEntitySet="tblDeneyimlerim">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Baslik" ColumnName="Baslik" />
@@ -209,7 +207,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblEgitimlerim">
-            <EntityTypeMapping TypeName="dbCvModel.tblEgitimlerim">
+            <EntityTypeMapping TypeName="dbModel.tblEgitimlerim">
               <MappingFragment StoreEntitySet="tblEgitimlerim">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Baslik" ColumnName="Baslik" />
@@ -221,7 +219,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblHakkimda">
-            <EntityTypeMapping TypeName="dbCvModel.tblHakkimda">
+            <EntityTypeMapping TypeName="dbModel.tblHakkimda">
               <MappingFragment StoreEntitySet="tblHakkimda">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
@@ -235,7 +233,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblHobilerim">
-            <EntityTypeMapping TypeName="dbCvModel.tblHobilerim">
+            <EntityTypeMapping TypeName="dbModel.tblHobilerim">
               <MappingFragment StoreEntitySet="tblHobilerim">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
@@ -244,10 +242,9 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblIletisim">
-            <EntityTypeMapping TypeName="dbCvModel.tblIletisim">
+            <EntityTypeMapping TypeName="dbModel.tblIletisim">
               <MappingFragment StoreEntitySet="tblIletisim">
                 <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Kimden" ColumnName="Kimden" />
                 <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="Konu" ColumnName="Konu" />
@@ -257,7 +254,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblSertifikalarim">
-            <EntityTypeMapping TypeName="dbCvModel.tblSertifikalarim">
+            <EntityTypeMapping TypeName="dbModel.tblSertifikalarim">
               <MappingFragment StoreEntitySet="tblSertifikalarim">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
@@ -265,7 +262,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tblYeteneklerim">
-            <EntityTypeMapping TypeName="dbCvModel.tblYeteneklerim">
+            <EntityTypeMapping TypeName="dbModel.tblYeteneklerim">
               <MappingFragment StoreEntitySet="tblYeteneklerim">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />

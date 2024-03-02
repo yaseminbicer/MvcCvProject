@@ -13,10 +13,10 @@ namespace MvcCvPrroject.Models.Entity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbCvEntities : DbContext
+    public partial class dbEntities : DbContext
     {
-        public dbCvEntities()
-            : base("name=dbCvEntities")
+        public dbEntities()
+            : base("name=dbEntities")
         {
         }
     

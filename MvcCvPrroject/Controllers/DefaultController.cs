@@ -10,7 +10,7 @@ namespace MvcCvPrroject.Controllers
     public class DefaultController : Controller
     {
         // GET: Default
-        dbCvEntities db = new dbCvEntities();
+        dbEntities db = new dbEntities();
         public ActionResult Index()
         {
             var degerler = db.tblHakkimda.ToList();
