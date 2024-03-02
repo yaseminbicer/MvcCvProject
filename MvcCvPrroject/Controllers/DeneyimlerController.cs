@@ -7,7 +7,7 @@ using MvcCvPrroject.Repositories;
 
 namespace MvcCvPrroject.Controllers
 {
-    public class Deneyimlerim : Controller
+    public class DeneyimlerController : Controller
     {
         // GET: Deneyim
         DeneyimRepository repo = new DeneyimRepository();

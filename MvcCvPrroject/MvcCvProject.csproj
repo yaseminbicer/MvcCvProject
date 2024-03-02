@@ -127,7 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Controllers\Deneyimlerim.cs" />
+    <Compile Include="Controllers\DeneyimlerimController.cs" />
     <Compile Include="Controllers\HakkimdaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2353,7 +2353,9 @@
     <Content Include="Views\Default\İletisim.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Hakkimda\Index.cshtml" />
-    <Content Include="Views\Deneyimlerim\DeneyimlerimIndex.cshtml" />
+    <Content Include="Views\Deneyimlerim\Index.cshtml" />
+    <Content Include="Views\Deneyimlerim\DeneyimEkle.cshtml" />
+    <Content Include="Views\Deneyimlerim\DeneyimGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2414,7 +2416,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55296</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55296/Views/Deneyimlerim/DeneyimlerimIndex.cshtml</IISUrl>
+          <IISUrl>http://localhost:55296/Views</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
