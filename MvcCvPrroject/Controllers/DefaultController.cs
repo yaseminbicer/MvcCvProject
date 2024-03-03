@@ -31,10 +31,20 @@ namespace MvcCvPrroject.Controllers
             var yetenekler = db.tblYeteneklerim.ToList();
             return PartialView(yetenekler);
         }
-        public PartialViewResult Hobilerim()
+        public PartialViewResult Projelerim()
         {
-            var hobiler = db.tblHobilerim.ToList();
-            return PartialView(hobiler);
+            var projeler = db.tblProjelerim.ToList();
+            return PartialView(projeler);
+        }
+        public PartialViewResult Referanslarim()
+        {
+            var referanslar = db.tblReferanslarim.ToList();
+            return PartialView(referanslar);
+        }
+        public PartialViewResult SosyalMedya()
+        {
+            var sosyalMedya = db.tblSosyalMedya.ToList();
+            return PartialView(sosyalMedya);
         }
         public PartialViewResult Sertifikalarim()
         {

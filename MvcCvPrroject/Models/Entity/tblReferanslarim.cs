@@ -12,10 +12,11 @@ namespace MvcCvPrroject.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class tblHobilerim
+    public partial class tblReferanslarim
     {
         public int ID { get; set; }
-        public string Aciklama1 { get; set; }
-        public string Aciklama2 { get; set; }
+        public string AdSoyad { get; set; }
+        public string Mail { get; set; }
+        public string Aciklama { get; set; }
     }
 }

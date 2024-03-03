@@ -164,13 +164,19 @@
     <Compile Include="Models\Entity\tblHakkimda.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\tblHobilerim.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Entity\tblIletisim.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\tblProjelerim.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\tblReferanslarim.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\tblSertifikalarim.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\tblSosyalMedya.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\tblYeteneklerim.cs">
@@ -181,9 +187,11 @@
     <Compile Include="Repositories\EgitimRepository.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\HakkimdaRepository.cs" />
-    <Compile Include="Repositories\HobilerimRepository.cs" />
     <Compile Include="Repositories\IletisimRepository.cs" />
+    <Compile Include="Repositories\ProjelerimRepository.cs" />
+    <Compile Include="Repositories\ReferansRepository.cs" />
     <Compile Include="Repositories\SertifikalarimRepository.cs" />
+    <Compile Include="Repositories\SosyalMedyaRepository.cs" />
     <Compile Include="Repositories\YeteneklerimRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2352,7 +2360,6 @@
     <Content Include="Views\Default\Deneyim.cshtml" />
     <Content Include="Views\Default\Egitimlerim.cshtml" />
     <Content Include="Views\Default\Yeteneklerim.cshtml" />
-    <Content Include="Views\Default\Hobilerim.cshtml" />
     <Content Include="Views\Default\Sertifikalarim.cshtml" />
     <Content Include="Views\Default\İletisim.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
@@ -2370,6 +2377,9 @@
     <Content Include="Views\Sertifikalarim\SertifikaGetir.cshtml" />
     <Content Include="Views\Sertifikalarim\YeniSertifika.cshtml" />
     <Content Include="Views\Iletisim\Index.cshtml" />
+    <Content Include="Views\Default\Projelerim.cshtml" />
+    <Content Include="Views\Default\Referanslarim.cshtml" />
+    <Content Include="Views\Default\SosyalMedya.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

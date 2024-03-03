@@ -9,10 +9,12 @@
         <EntityTypeShape EntityType="dbModel.tblDeneyimlerim" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbModel.tblEgitimlerim" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbModel.tblHakkimda" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbModel.tblHobilerim" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbModel.tblIletisim" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbModel.tblSertifikalarim" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="dbModel.tblYeteneklerim" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbModel.tblProjelerim" Width="1.5" PointX="10.25" PointY="3.75" />
+        <EntityTypeShape EntityType="dbModel.tblReferanslarim" Width="1.5" PointX="8.875" PointY="0.75" />
+        <EntityTypeShape EntityType="dbModel.tblSosyalMedya" Width="1.5" PointX="8.5" PointY="3.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -6,7 +6,7 @@ using MvcCvPrroject.Models.Entity;
 
 namespace MvcCvPrroject.Repositories
 {
-    public class HobilerimRepository : GenericRepository<tblHobilerim>
+    public class ProjelerimRepository : GenericRepository<tblProjelerim>
     {
     }
 }
