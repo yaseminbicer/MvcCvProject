@@ -7,6 +7,7 @@ using MvcCvPrroject.Models.Entity;
 
 namespace MvcCvPrroject.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default
