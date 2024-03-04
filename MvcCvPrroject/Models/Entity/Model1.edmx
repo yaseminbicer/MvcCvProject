@@ -89,8 +89,10 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PlatformAdi" Type="varchar" MaxLength="50" />
-          <Property Name="İkonUrl" Type="varchar(max)" />
+          <Property Name="Adi" Type="varchar" MaxLength="50" />
+          <Property Name="Link" Type="varchar(max)" />
+          <Property Name="Ikon" Type="varchar" MaxLength="50" />
+          <Property Name="Durum" Type="bit" />
         </EntityType>
         <EntityType Name="tblYeteneklerim">
           <Key>
@@ -220,8 +222,10 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PlatformAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="İkonUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Ikon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Durum" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -328,8 +332,10 @@
           <EntitySetMapping Name="tblSosyalMedya">
             <EntityTypeMapping TypeName="dbModel.tblSosyalMedya">
               <MappingFragment StoreEntitySet="tblSosyalMedya">
-                <ScalarProperty Name="İkonUrl" ColumnName="İkonUrl" />
-                <ScalarProperty Name="PlatformAdi" ColumnName="PlatformAdi" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="Ikon" ColumnName="Ikon" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Adi" ColumnName="Adi" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

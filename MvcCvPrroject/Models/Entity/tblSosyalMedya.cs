@@ -15,7 +15,9 @@ namespace MvcCvPrroject.Models.Entity
     public partial class tblSosyalMedya
     {
         public int ID { get; set; }
-        public string PlatformAdi { get; set; }
-        public string İkonUrl { get; set; }
+        public string Adi { get; set; }
+        public string Link { get; set; }
+        public string Ikon { get; set; }
+        public Nullable<bool> Durum { get; set; }
     }
 }

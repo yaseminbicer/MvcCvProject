@@ -133,6 +133,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IletisimController.cs" />
     <Compile Include="Controllers\SertifikalarimController.cs" />
+    <Compile Include="Controllers\SosyalMedyaController.cs" />
     <Compile Include="Controllers\YeteneklerimController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2045,6 +2046,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="credit-card-formvuejs %282%29\credit-card-formvuejs\dist\index.html" />
+    <Content Include="credit-card-formvuejs %282%29\credit-card-formvuejs\dist\style.css" />
+    <Content Include="credit-card-formvuejs %282%29\credit-card-formvuejs\LICENSE.txt" />
+    <Content Include="credit-card-formvuejs %282%29\credit-card-formvuejs\src\index.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -2326,6 +2331,8 @@
     <Content Include="Models\Entity\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="credit-card-formvuejs %282%29\credit-card-formvuejs\README.md" />
+    <Content Include="credit-card-formvuejs %282%29\credit-card-formvuejs\src\style.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2380,6 +2387,8 @@
     <Content Include="Views\Default\Projelerim.cshtml" />
     <Content Include="Views\Default\Referanslarim.cshtml" />
     <Content Include="Views\Default\SosyalMedya.cshtml" />
+    <Content Include="Views\SosyalMedya\Index.cshtml" />
+    <Content Include="Views\SosyalMedya\SayfaGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
