@@ -4,49 +4,40 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-
-/
-<br />
-<form method="post">
-    <br />
-</form>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CodePen - Credit Card Form - VueJs</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="~/credit-card-formvuejs (2)/credit-card-formvuejs/dist/style.css">
+    <title>Yeni Yetenek Ekle</title>
+    <link rel="stylesheet" href="~/HtmlCssJs/style.css" />
+    <script src="~/HtmlCssJs/script.js"></script>
+
 
 </head>
 <body>
-    <!-- partial:index.partial.html -->
-    <div class="wrapper" id="app">
-        <div class="card-form">
-            <div class="card-form__inner">
-                <div class="card-input">
-                    <h1>Yeni Yetenek Ekleme Sayfası</h1>
-                    <br />
-                    <br />
-                    <label for="cardNumber" class="card-input__label">Yetenek Açıklaması</label>
-                    @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control card-input__input" })
-                    @*<input type="text" id="cardNumber" class="card-input__input" v-mask="generateCardNumberMask" v-model="cardNumber" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardNumber" autocomplete="off">*@
+    <form method="post">
+        <div class="page">
+            <div class="container">
+                <div class="add-label">
+                    <label for="yetenek ekle">Yetenek Ekle</label>
                 </div>
-                <div class="card-input">
-                    <label for="cardName" class="card-input__label">Derece</label>
-                    @Html.TextBoxFor(x => x.Oran, new { @class = "form-control card-input__input" })
-                    @* <input type="text" id="cardName" class="card-input__input" v-model="cardName" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardName" autocomplete="off">*@
+                <div style="margin-bottom: 10px;" class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Yetenek" id='name' required />
+                    <label for="name" class="form__label">Yetenek Açıklaması</label>
                 </div>
-                <button class="card-form__button">
-                    Kaydet
-                </button>
+                <div class="form__group field">
+                    <input type="number" min="1" max="100" oninput="validateNumber(this);" class="form__field" placeholder="" name="Oran" id='name2' required />
+                    <label for="name2" class="form__label">Derece</label>
+                </div>
+                <div class="button_lay">
+                    <button class="button" style="letter-spacing: 5px;" role="button">KAYDET</button>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- partial -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
-    <script src='https://unpkg.com/vue-the-mask@0.11.1/dist/vue-the-mask.js'></script>
-    <script src="~/credit-card-formvuejs (2)/credit-card-formvuejs/dist/script.js"></script>
 
+
+
+        <!-- partial -->
+    </form>
 </body>
 </html>

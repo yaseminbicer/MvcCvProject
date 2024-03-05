@@ -4,8 +4,17 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeni Eğitim Bilgisi Ekle</title>
+    <link rel="stylesheet" href="~/HtmlCssJs/style.css" />
+    <script src="~/HtmlCssJs/script.js"></script>
+
+</head>
+
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
         <!-- Navbar -->
@@ -36,7 +45,7 @@
                                     <tbody>
                                         @foreach (var item in Model)
                                         {
-                                            
+
                                             <tr>
                                                 <td>@item.ID</td>
                                                 <td>@item.Adi</td>
@@ -69,20 +78,34 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title">Sosyal Medya Ekleme Paneli</h2>
                     </div>,
                     <form method="post" action="~/SosyalMedya/Ekle">
-                        <div class="modal-body">
-                            <label>Sosyal Medya İsmi</label>
-                            <input type="text" name="Adi" class="form-control" />
-                            <br />
-                            <label>Sosyal Medya Linki</label>
-                            <input type="text" name="Link" class="form-control" />
-                            <br />
-                            <label>İkon Değeri</label>
-                            <input type="text" name="Ikon" class="form-control" />
-                            <br />
-                            <button class="btn btn-info">Kaydet</button>
+
+                        <div class="page">
+                            <div class="container">
+                                <div class="add-label">
+                                    <label for="Sosyal Medya Ekle">Sosyal Medya Ekle</label>
+                                </div>
+                                <div style="margin-bottom: 10px;" class="form__group field">
+                                    <input type="input" class="form__field" placeholder="" name="Adi" id='name' required />
+                                    <label for="name" class="form__label">Sosyal Medya İsmi</label>
+                                </div>
+
+                                <div style="margin-bottom: 10px;" class="form__group field">
+                                    <input type="input" class="form__field" placeholder="" name="Link" id='name' required />
+                                    <label for="name" class="form__label">Sosyal Medya Linki</label>
+                                </div>
+
+
+                                <div style="margin-bottom: 10px;" class="form__group field">
+                                    <input type="input" class="form__field" placeholder="" name="Ikon" id='name' required />
+                                    <label for="name" class="form__label">İkon Değeri</label>
+                                </div>
+
+                                <div class="button_lay">
+                                    <button class="button" style="letter-spacing: 5px;" role="button">Kaydet</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>

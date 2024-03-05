@@ -3,29 +3,54 @@
     ViewBag.Title = "EgitimEkle";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<br />
-<h4>Yeni Eğitim Bilgisi Ekleme Sayfası</h4>
-<br />
-<form method="post">
-    @Html.Label("Başlık")
-    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.Baslik, "", new { @style = "color:red" })
-    <br />
-    @Html.Label("Alt Başlık 1")
-    @Html.TextBoxFor(x => x.AltBaslik1, new { @class = "form-control" })
-    <br />
-    @Html.Label("Alt Başlık 2")
-    @Html.TextBoxFor(x => x.AltBaslik2, new { @class = "form-control" })
-    <br />
-    @Html.Label("Tarih")
-    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
-    <br />
-    @Html.Label("Genel Not Ortalaması")
-    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.GNO, "", new { @style = "color:blue" })
-    <br />
 
-    <button class="btn btn-info">Kaydet</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeni Eğitim Bilgisi Ekle</title>
+    <link rel="stylesheet" href="~/HtmlCssJs/style.css" />
+    <script src="~/HtmlCssJs/script.js"></script>
+
+</head>
+
+<form method="post">
+
+    <div class="page">
+        <div class="container">
+            <div class="add-label">
+                <label for="Yeni Eğitim Bilgisi Ekle">Yeni Eğitim Bilgisi Ekle</label>
+            </div>
+            <div style="margin-bottom: 10px;" class="form__group field">
+                <input type="input" class="form__field" placeholder="" name="Baslik" id='name' required />
+                <label for="name" class="form__label">Başlık</label>
+            </div>
+
+            <div style="margin-bottom: 10px;" class="form__group field">
+                <input type="input" class="form__field" placeholder="" name="AlBaslik1" id='name' required />
+                <label for="name" class="form__label">Alt Başlık 1</label>
+            </div>
+
+
+            <div style="margin-bottom: 10px;" class="form__group field">
+                <input type="input" class="form__field" placeholder="" name="AltBaslik2" id='name' required />
+                <label for="name" class="form__label">Alt Başlık 2</label>
+            </div>
+
+            <div style="margin-bottom: 10px;" class="form__group field">
+                <input type="input" class="form__field" placeholder="" name="Tarih" id='name' required />
+                <label for="name" class="form__label">Tarih</label>
+            </div>
+
+            <div style="margin-bottom: 10px;" class="form__group field">
+                <input type="input" class="form__field" placeholder="" name="GNO" id='name' required />
+                <label for="name" class="form__label">Genel Not Ortalaması</label>
+            </div>
+            <div class="button_lay">
+                <button class="button" style="letter-spacing: 5px;" role="button">Kaydet</button>
+            </div>
+        </div>
+    </div>
 </form>
 
 

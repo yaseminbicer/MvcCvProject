@@ -4,17 +4,46 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<br />
-<h4>Yeni Deneyim Ekleme Sayfası</h4>
-<br />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeni Deneyim Ekle</title>
+    <link rel="stylesheet" href="~/HtmlCssJs/style.css" />
+    <script src="~/HtmlCssJs/script.js"></script>
+
+</head>
+
 <form method="post">
-    <input type="text" name="Baslik" class="form-control" placeholder="Başlığı yazınız"/>
-    <br />
-    <input type="text" name="AltBaslik" class="form-control" placeholder="Alt Başlık"/>
-    <br />
-    <input type="text" name="Tarih" class="form-control" placeholder="Çalışma Tarihi"/>
-    <br />
-    <textarea placeholder="Açıklama giriniz" name="Aciklama" class="form-control" rows="5"></textarea>
-    <br /> 
-    <button class="btn btn-info">Kaydet</button>
+
+    <div class="page">
+        <div class="container">
+            <div class="add-label">
+                <label for="Yeni Deneyim Ekle">Yeni Deneyim Ekle</label>
+            </div>
+            <div style="margin-bottom: 10px;" class="form__group field">
+                <input type="input" class="form__field" placeholder="" name="Baslik" id='name' required />
+                <label for="name" class="form__label">Başlık</label>
+            </div>
+
+            <div style="margin-bottom: 10px;" class="form__group field">
+                <input type="input" class="form__field" placeholder="" name="AlBaslik" id='name' required />
+                <label for="name" class="form__label">Alt Başlık 1</label>
+            </div>
+
+            <div style="margin-bottom: 10px;" class="form__group field">
+                <input type="input" class="form__field" placeholder="" name="Tarih" id='name' required />
+                <label for="name" class="form__label">Tarih</label>
+            </div>
+
+            <div style="margin-bottom: 10px;" class="form__group field">
+                <input type="input" class="form__field" placeholder="" name="Aciklama" id='name' required />
+                <label for="name" class="form__label">Açıklama</label>
+            </div>
+            <div class="button_lay">
+                <button class="button" style="letter-spacing: 5px;" role="button">Kaydet</button>
+            </div>
+        </div>
+    </div>
 </form>

@@ -2326,6 +2326,9 @@
     <Content Include="AdminLTE-3.0.4\plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.js.map" />
     <Content Include="AdminLTE-3.0.4\README.md" />
+    <Content Include="HtmlCssJs\index.html" />
+    <Content Include="HtmlCssJs\script.js" />
+    <Content Include="HtmlCssJs\style.css" />
     <EntityDeploy Include="Models\Entity\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>

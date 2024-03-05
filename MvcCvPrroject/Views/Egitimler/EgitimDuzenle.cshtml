@@ -28,4 +28,61 @@
 
     <button class="btn btn-info">Kaydet</button>
 </form>
+@*@using MvcCvPrroject.Models.Entity
+@model List<tblEgitimlerim>
+
+@{
+    ViewBag.Title = "EgitimDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eğitim Bilgisi Düzenleme</title>
+    <link rel="stylesheet" href="~/HtmlCssJs/style.css" />
+    <script src="~/HtmlCssJs/script.js"></script>
+</head>
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <div class="page">
+            <div class="container">
+                <div class="add-label">
+                    <label for="Eğitim Bilgisi Düzenleme">Eğitim Bilgisi Düzenleme</label>
+                </div>
+                <div style="margin-bottom: 10px;" class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Baslik" value="@item.Baslik" id='name1' required />
+                    <label for="name1" class="form__label">Başlık</label>
+                </div>
+
+                <div style="margin-bottom: 10px;" class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="AlBaslik1" value="@item.AltBaslik1" id='name2' required />
+                    <label for="name2" class="form__label">Alt Başlık 1</label>
+                </div>
+
+
+                <div style="margin-bottom: 10px;" class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="AltBaslik2" value="@item.AltBaslik2" id='name3' required />
+                    <label for="name3" class="form__label">Alt Başlık 2</label>
+                </div>
+
+                <div style="margin-bottom: 10px;" class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Tarih" value="@item.Tarih" id='name4' required />
+                    <label for="name4" class="form__label">Tarih</label>
+                </div>
+
+                <div style="margin-bottom: 10px;" class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="GNO" value="@item.GNO" id='name5' required />
+                    <label for="name5" class="form__label">Genel Not Ortalaması</label>
+                </div>
+                <div class="button_lay">
+                    <button class="button" style="letter-spacing: 5px;" role="button">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    }
+
+</form>*@
+
 
