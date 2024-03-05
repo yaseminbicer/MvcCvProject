@@ -5,6 +5,44 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eğitimlerim</title>
+    <link rel="stylesheet" href="~/table/dist/style.css">
+
+</head>
+
+
+<div class="container">
+
+    <div class="table">
+        <div class="table-header">
+            <div class="header__item"><a id="name" class="filter__link" href="#">ID</a></div>
+            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Başlık</a></div>
+            <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Alt Başlık</a></div>
+            <div class="header__item"><a id="t" class="filter__link filter__link--number" href="#">Tarih</a></div>
+        </div>
+        <div class="table-content">
+            <div>
+                @foreach (var item in Model)
+                {
+                    <div class="table-row">
+                        <div class="table-data">@item.ID</div>
+                        <div class="table-data">@item.Baslik</div>
+                        <div class="table-data">@item.AltBaslik</div>
+                        <div class="table-data">@item.Tarih</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+@*</div>
 <h2>Index</h2>
 <br />
 <h2>Deneyim Listesi</h2>
@@ -31,7 +69,7 @@
     }
 
 </table>
-<a href="~/Deneyimlerim/DeneyimEkle/" class="btn btn-primary">Yeni Deneyim Ekle</a>
+<a href="~/Deneyimlerim/DeneyimEkle/" class="btn btn-primary">Yeni Deneyim Ekle</a>*@
 
 
 

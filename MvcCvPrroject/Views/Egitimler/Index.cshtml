@@ -5,7 +5,56 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<br />
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eğitimlerim</title>
+    <link rel="stylesheet" href="~/table/dist/style.css">
+
+</head>
+
+
+<div class="container">
+   
+        <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="name" class="filter__link" href="#">ID</a></div>
+                <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Başlık</a></div>
+                <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Alt Başlık 1</a></div>
+                <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Alt Başlık 2</a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">GNO</a></div>
+                <div class="header__item"><a id="t" class="filter__link filter__link--number" href="#">Tarih</a></div>
+            </div>
+            <div class="table-content">
+                <div>
+
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="table-row">
+                            <div class="table-data">@item.ID</div>
+                            <div class="table-data">@item.Baslik</div>
+                            <div class="table-data">@item.AltBaslik1</div>
+                            <div class="table-data">@item.AltBaslik2</div>
+                            <div class="table-data">@item.GNO</div>
+                            <div class="table-data">@item.Tarih</div>
+                        </div>
+                    }
+                    </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+
+@*<br />
 <h2>Eğitim Listesi</h2>
 <table class="table table-bordered">
     <tr>
@@ -46,7 +95,7 @@
     }
 
 </table>
-<a href="~/Egitimler/EgitimEkle/" class="btn btn-primary">Yeni Eğitim Bilgisi Ekle</a>
+<a href="~/Egitimler/EgitimEkle/" class="btn btn-primary">Yeni Eğitim Bilgisi Ekle</a>*@
 
 
 

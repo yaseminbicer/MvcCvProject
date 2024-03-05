@@ -2348,6 +2348,12 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="table\dist\index.html" />
+    <Content Include="table\dist\script.js" />
+    <Content Include="table\dist\style.css" />
+    <Content Include="table\LICENSE.txt" />
+    <Content Include="table\src\index.html" />
+    <Content Include="table\src\script.js" />
     <Content Include="startbootstrap-resume-gh-pages\assets\img\favicon.ico" />
     <Content Include="startbootstrap-resume-gh-pages\assets\img\profile.jpg" />
     <Content Include="startbootstrap-resume-gh-pages\css\styles.css" />
@@ -2394,6 +2400,8 @@
     <Content Include="Views\SosyalMedya\Index.cshtml" />
     <Content Include="Views\SosyalMedya\SayfaGetir.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="table\README.md" />
+    <Content Include="table\src\style.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -9,71 +9,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yeni Eğitim Bilgisi Ekle</title>
+    <title>Sosyal Medya Listem</title>
+    <link rel="stylesheet" href="~/table/dist/style.css">
+
+</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Yeni Yetenek Ekle</title>
     <link rel="stylesheet" href="~/HtmlCssJs/style.css" />
     <script src="~/HtmlCssJs/script.js"></script>
+
 
 </head>
 
 <body class="hold-transition sidebar-mini">
+    <div class="container">
+
+        <div class="table">
+            <div class="table-header">
+                <div class="header__item"><a id="name" class="filter__link" href="#">ID</a></div>
+                <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Sosyal Medya</a></div>
+                <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Durum</a></div>
+                <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Düzenle</a></div>
+                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Sil</a></div>
+            </div>
+            <div class="table-content">
+                <div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="table-row">
+                            <div class="table-data">@item.ID</div>
+                            <div class="table-data">@item.Adi</div>
+                            <div class="table-data">@item.Durum</div>
+
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-info" data-toggle="modal" data-target="#Modal1">Yeni Sosyal Medya Hesabı Ekle</button>
+
+
+
+
+        @*<table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 10px">#</th>
+                        <th>Sosyal Medya</th>
+                        <th>Durum</th>
+                        <th>Düzenle</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+                        <tr>
+                            <td>@item.ID</td>
+                            <td>@item.Adi</td>
+                            <td>@item.Durum</td>
+                            <td>
+                                <a class="btn btn-info btn-sm" href="~/SosyalMedya/SayfaGetir/@item.ID">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Düzenle
+                                </a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger btn-sm" href="~/SosyalMedya/Sil/@item.ID">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Sil
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>*@
+    </div>
     <div class="wrapper">
         <!-- Navbar -->
         <!-- Main content -->
-        <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-10">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Sosyal Medya Listem</h3>
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                                <button class="btn btn-info" data-toggle="modal" data-target="#Modal1">Yeni Sosyal Medya Hesabı Ekle</button>
-                                <br />
-                                <br />
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th style="width: 10px">#</th>
-                                            <th>Sosyal Medya</th>
-                                            <th>Durum</th>
-                                            <th>Düzenle</th>
-                                            <th>Sil</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach (var item in Model)
-                                        {
 
-                                            <tr>
-                                                <td>@item.ID</td>
-                                                <td>@item.Adi</td>
-                                                <td>@item.Durum</td>
-                                                <td>
-                                                    <a class="btn btn-info btn-sm" href="~/SosyalMedya/SayfaGetir/@item.ID">
-                                                        <i class="fas fa-pencil-alt">
-                                                        </i>
-                                                        Düzenle
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <a class="btn btn-danger btn-sm" href="~/SosyalMedya/Sil/@item.ID">
-                                                        <i class="fas fa-trash">
-                                                        </i>
-                                                        Sil
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        }
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+
+
         <div class="modal" id="Modal1">
             <div class="modal-dialog">
                 <div class="modal-content">
