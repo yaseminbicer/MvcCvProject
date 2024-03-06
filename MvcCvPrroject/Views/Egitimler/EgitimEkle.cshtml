@@ -8,13 +8,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Yeni Eğitim Bilgisi Ekle</title>
-    <link rel="stylesheet" href="~/HtmlCssJs/style.css" />
-    <script src="~/HtmlCssJs/script.js"></script>
+    <title>Eğitim Ekle</title>
+    <link rel='stylesheet' href='https://codepen.io/uzcho_/pen/RmOWmw.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
+    <link rel="stylesheet" href="~/responsive-contact-form/dist/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
 
-<form method="post">
+<body>
+    
+    <form method="post">
+        <div style="margin-top:5rem;" class="resume-section-content">
+
+            <div class="field" tabindex="1">
+                <label for="AdSoyad">
+                    <i class="far fa-user"></i>Başlık
+                </label>
+                <input name="Baslik" type="text" required></input>
+            </div>
+            <div class="field" tabindex="2">
+                <label for="email">
+                    <i class="far fa-envelope"></i>Alt Başlık 1
+                </label>
+                <input name="AltBaslik1" type="text" required></input>
+            </div>
+            <div class="field" tabindex="3">
+                <label for="text">
+                    <i class="far fa-edit"></i>Alt Başlık 2
+                </label>
+                <input name="AltBaslik2" type="text" required></input>
+            </div>
+            <div class="field" tabindex="3">
+                <label for="message">
+                    <i class="far fa-edit"></i>Tarih
+                </label>
+                <input name="Tarih" type="text" required></input>
+            </div>
+            <div class="field" tabindex="3">
+                <label for="message">
+                    <i class="far fa-edit"></i>GNO
+                </label>
+                <input name="GNO" type="text" required></input>
+            </div>
+            <button type="submit">Kaydet</button>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+@*<form method="post">
 
     <div class="page">
         <div class="container">
@@ -51,6 +105,6 @@
             </div>
         </div>
     </div>
-</form>
+</form>*@
 
 

@@ -9,14 +9,14 @@ html.scroll-smooth {
 html,
 body,
 .wrapper {
-  min-height: 100%;
+    position:fixed;
+  height:100%;
 }
 
 .wrapper {
-  position: relative;
-
+ 
   & .content-wrapper {
-    min-height: calc(100vh - #{$main-header-height} - #{$main-footer-height});
+   height: 100%;
   }
 
   .layout-boxed & {

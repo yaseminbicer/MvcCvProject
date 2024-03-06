@@ -14,26 +14,27 @@
     <meta charset="UTF-8">
     <title>Eğitimlerim</title>
     <link rel="stylesheet" href="~/table/dist/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
+<body>
 
-
-<div class="container">
-   
         <div class="table">
             <div class="table-header">
-                <div class="header__item"><a id="name" class="filter__link" href="#">ID</a></div>
-                <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Başlık</a></div>
-                <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Alt Başlık 1</a></div>
-                <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Alt Başlık 2</a></div>
-                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">GNO</a></div>
-                <div class="header__item"><a id="t" class="filter__link filter__link--number" href="#">Tarih</a></div>
+                <div class="header__item"><a id="ID" class="filter__link" href="#">ID</a></div>
+                <div class="header__item"><a id="Baslik" class="filter__link filter__link--number" href="#">Başlık</a></div>
+                <div class="header__item"><a id="AltBaslik1" class="filter__link filter__link--number" href="#">Alt Başlık 1</a></div>
+                <div class="header__item"><a id="AltBaslik2" class="filter__link filter__link--number" href="#">Alt Başlık 2</a></div>
+                <div class="header__item"><a id="GNO" class="filter__link filter__link--number" href="#">GNO</a></div>
+                <div class="header__item"><a id="Tarih" class="filter__link filter__link--number" href="#">Tarih</a></div>
+                <div class="header__item"><a id="EgitimSil" class="filter__link filter__link--number" href="#"></a></div>
+                <div class="header__item"><a id="EgitimDuzenle" class="filter__link filter__link--number" href="#"></a></div>
             </div>
             <div class="table-content">
                 <div>
 
 
-                    @foreach (var item in Model)
+                    @foreach(var item in Model)
                     {
                         <div class="table-row">
                             <div class="table-data">@item.ID</div>
@@ -42,60 +43,66 @@
                             <div class="table-data">@item.AltBaslik2</div>
                             <div class="table-data">@item.GNO</div>
                             <div class="table-data">@item.Tarih</div>
+                            <div class="delete-button" href="~/Egitimler/EgitimSil/@item.ID">
+                                <i class="fas fa-trash"></i>
+                            </div>
+                            <div class="edit-button" >
+                                <i class="fas fa-edit" href="~/Egitimler/EgitimDzuenle/@item.ID"></i>
+                            </div>
                         </div>
                     }
-                    </div>
+                    
+                </div>
             </div>
         </div>
-        
-    </div>
 
-
-
+        <a href="~/Egitimler/EgitimEkle" class="btn btn-primary">Yeni Eğitim Bilgisi Ekle</a>
+</body>
+</html>
 
 
 @*<br />
-<h2>Eğitim Listesi</h2>
-<table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>Başlık</th>
-        <th>Alt Başlık</th>
-        <th>Alt Başlık 2</th>
-        <th>GNO</th>
-        <th>Tarih</th>
-        <th>Sil</th>
-        <th>Düzenle</th>
-    </tr>
-    @foreach (var item in Model)
-    {
+    <h2>Eğitim Listesi</h2>
+    <table class="table table-bordered">
         <tr>
-            <td>@item.ID</td>
-            <td>@item.Baslik</td>
-            <td>@item.AltBaslik1</td>
-            <td>@item.AltBaslik2</td>
-            <td>@item.Tarih</td>
-            <td>@item.GNO</td>
-            <td>
-                <a class="btn btn-danger btn-sm" href="~/Egitimler/EgitimSil/@item.ID">
-                    <i class="fas fa-trash">
-                    </i>
-                    Sil
-                </a>
-            </td>
-            <td>
-                <a class="btn btn-info btn-sm" href="~/Egitimler/EgitimDuzenle/@item.ID">
-                    <i class="fas fa-pencil-alt">
-                    </i>
-                    Düzenle
-                </a>
-            </td>
+            <th>ID</th>
+            <th>Başlık</th>
+            <th>Alt Başlık</th>
+            <th>Alt Başlık 2</th>
+            <th>GNO</th>
+            <th>Tarih</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
         </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Baslik</td>
+                <td>@item.AltBaslik1</td>
+                <td>@item.AltBaslik2</td>
+                <td>@item.Tarih</td>
+                <td>@item.GNO</td>
+                <td>
+                    <a class="btn btn-danger btn-sm" href="~/Egitimler/EgitimSil/@item.ID">
+                        <i class="fas fa-trash">
+                        </i>
+                        Sil
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-info btn-sm" href="~/Egitimler/EgitimDuzenle/@item.ID">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Düzenle
+                    </a>
+                </td>
+            </tr>
 
-    }
+        }
 
-</table>
-<a href="~/Egitimler/EgitimEkle/" class="btn btn-primary">Yeni Eğitim Bilgisi Ekle</a>*@
+    </table>*@
+
 
 
 

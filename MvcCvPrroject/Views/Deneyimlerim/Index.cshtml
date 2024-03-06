@@ -12,64 +12,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Eğitimlerim</title>
+    <title>Deneyimlerim</title>
     <link rel="stylesheet" href="~/table/dist/style.css">
 
 </head>
 
-
-<div class="container">
-
+<body>
     <div class="table">
         <div class="table-header">
-            <div class="header__item"><a id="name" class="filter__link" href="#">ID</a></div>
-            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Başlık</a></div>
-            <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Alt Başlık</a></div>
-            <div class="header__item"><a id="t" class="filter__link filter__link--number" href="#">Tarih</a></div>
+            <div class="header__item"><a id="ID" class="filter__link" href="#">ID</a></div>
+            <div class="header__item"><a id="Baslik" class="filter__link filter__link--number" href="#">Başlık</a></div>
+            <div class="header__item"><a id="AltBaslik" class="filter__link filter__link--number" href="#">Alt Başlık</a></div>
+            <div class="header__item"><a id="Tarih" class="filter__link filter__link--number" href="#">Tarih</a></div>
+            <div class="header__item"><a id="DeneyimSil" class="filter__link filter__link--number" href="#"></a></div>
+            <div class="header__item"><a id="DeneyimDuzenle" class="filter__link filter__link--number" href="#"></a></div>
         </div>
         <div class="table-content">
             <div>
-                @foreach (var item in Model)
+                @foreach(var item in Model)
                 {
                     <div class="table-row">
                         <div class="table-data">@item.ID</div>
                         <div class="table-data">@item.Baslik</div>
                         <div class="table-data">@item.AltBaslik</div>
                         <div class="table-data">@item.Tarih</div>
+                        <div class="delete-button" href="~/Deneyimlerim/DeneyimSil/@item.ID">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                        <div class="edit-button">
+                            <i class="fas fa-edit" href="~/Deneyimlerim/DeneyimDuzenle/@item.ID"></i>
+                        </div>
                     </div>
                 }
+                <a href="~/Deneyimlerim/DeneyimEkle/" class="btn btn-primary">Yeni Deneyim Ekle</a>
             </div>
         </div>
     </div>
+</body>
+</html>
+    @*</div>
+        <h2>Index</h2>
+        <br />
+        <h2>Deneyim Listesi</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Başlık</th>
+                <th>Alt Başlık</th>
+                <th>Tarih</th>
+                <th>Sil</th>
+                <th>Düzenle</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Baslik</td>
+                    <td>@item.AltBaslik</td>
+                    <td>@item.Tarih</td>
+                    <td><a href="~/Deneyimlerim/DeneyimSil/@item.ID" class="btn btn-danger">Sil</a></td>
+                    <td><a href="~/Deneyimlerim/DeneyimGetir/@item.ID" class="btn btn-warning">Düzenle</a></td>
+                </tr>
 
-@*</div>
-<h2>Index</h2>
-<br />
-<h2>Deneyim Listesi</h2>
-<table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>Başlık</th>
-        <th>Alt Başlık</th>
-        <th>Tarih</th>
-        <th>Sil</th>
-        <th>Düzenle</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.ID</td>
-            <td>@item.Baslik</td>
-            <td>@item.AltBaslik</td>
-            <td>@item.Tarih</td>
-            <td><a href="~/Deneyimlerim/DeneyimSil/@item.ID" class="btn btn-danger">Sil</a></td>
-            <td><a href="~/Deneyimlerim/DeneyimGetir/@item.ID" class="btn btn-warning">Düzenle</a></td>
-        </tr>
+            }
 
-    }
-
-</table>
-<a href="~/Deneyimlerim/DeneyimEkle/" class="btn btn-primary">Yeni Deneyim Ekle</a>*@
+        </table>*@
+   
 
 
 

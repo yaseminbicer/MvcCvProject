@@ -1,19 +1,48 @@
-﻿
-<div class="resume-section-content">
+﻿@using MvcCvPrroject.Models.Entity
+@model MvcCvPrroject.Models.Entity.tblIletisim
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim</title>
+    <link rel='stylesheet' href='https://codepen.io/uzcho_/pen/RmOWmw.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
+    <link rel="stylesheet" href="~/responsive-contact-form/dist/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
     <form method="post">
-        <h2 class="mb-5">İletişim</h2>
-        <label>Ad Soyad</label>
-        <input type="text" class="form-control" name="AdSoyad" />
+        <div class="resume-section-content">
 
-        <label>Mail</label>
-        <input type="text" class="form-control" name="Mail"/>
-
-        <label>Konu</label>
-        <input type="text" class="form-control" name="Konu" />
-
-        <label>Mesaj</label>
-        <input type="text" class="form-control" name="Mesaj"/>
-        <br />
-        <button class="btn btn-info">Mesaj Gönder</button>
+            <div class="field" tabindex="1">
+                <label for="AdSoyad">
+                    <i class="far fa-user"></i>Ad Soyad
+                </label>
+                <input name="AdSoyad" type="text" required></input>
+            </div>
+            <div class="field" tabindex="2">
+                <label for="email">
+                    <i class="far fa-envelope"></i>Mail
+                </label>
+                <input name="Mail" type="text" required></input>
+            </div>
+            <div class="field" tabindex="3">
+                <label for="text">
+                    <i class="far fa-edit"></i>Konu
+                </label>
+                <input name="Konu" type="text" required></input>
+            </div>
+            <div class="field" tabindex="3">
+                <label for="message">
+                    <i class="far fa-edit"></i>Mesaj
+                </label>
+                <input name="Mesaj" type="text" required></input>
+            </div>
+            <button type="submit">Mesaj Gönder</button>
+        </div>
+        </div>
     </form>
-</div>
+</body>
+</html>

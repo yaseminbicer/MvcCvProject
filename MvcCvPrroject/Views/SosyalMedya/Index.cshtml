@@ -13,44 +13,35 @@
     <link rel="stylesheet" href="~/table/dist/style.css">
 
 </head>
-<head>
-    <meta charset="UTF-8">
-    <title>Yeni Yetenek Ekle</title>
-    <link rel="stylesheet" href="~/HtmlCssJs/style.css" />
-    <script src="~/HtmlCssJs/script.js"></script>
-
-
-</head>
-
 <body class="hold-transition sidebar-mini">
-    <div class="container">
-
-        <div class="table">
-            <div class="table-header">
-                <div class="header__item"><a id="name" class="filter__link" href="#">ID</a></div>
-                <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Sosyal Medya</a></div>
-                <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Durum</a></div>
-                <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Düzenle</a></div>
-                <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Sil</a></div>
-            </div>
-            <div class="table-content">
-                <div>
-                    @foreach (var item in Model)
-                    {
-                        <div class="table-row">
-                            <div class="table-data">@item.ID</div>
-                            <div class="table-data">@item.Adi</div>
-                            <div class="table-data">@item.Durum</div>
 
 
-                        </div>
-                    }
-                </div>
+    <div class="table">
+        <div class="table-header">
+            <div class="header__item"><a id="name" class="filter__link" href="#">ID</a></div>
+            <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Sosyal Medya</a></div>
+            <div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Durum</a></div>
+            <div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Düzenle</a></div>
+            <div class="header__item"><a id="total" class="filter__link filter__link--number" href="#">Sil</a></div>
+        </div>
+        <div class="table-content">
+            <div>
+                @foreach(var item in Model)
+                {
+                    <div class="table-row">
+                        <div class="table-data">@item.ID</div>
+                        <div class="table-data">@item.Adi</div>
+                        <div class="table-data">@item.Durum</div>
+
+
+                    </div>
+                }
             </div>
         </div>
-        <button class="btn btn-info" data-toggle="modal" data-target="#Modal1">Yeni Sosyal Medya Hesabı Ekle</button>
-
-
+    </div>
+    <button class="btn btn-info" data-toggle="modal" data-target="#Modal1">Yeni Sosyal Medya Hesabı Ekle</button>
+</body>
+</html>
 
 
         @*<table class="table table-bordered">
@@ -89,54 +80,5 @@
                     }
                 </tbody>
             </table>*@
-    </div>
-    <div class="wrapper">
-        <!-- Navbar -->
-        <!-- Main content -->
-
-
-
-
-        <div class="modal" id="Modal1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    </div>,
-                    <form method="post" action="~/SosyalMedya/Ekle">
-
-                        <div class="page">
-                            <div class="container">
-                                <div class="add-label">
-                                    <label for="Sosyal Medya Ekle">Sosyal Medya Ekle</label>
-                                </div>
-                                <div style="margin-bottom: 10px;" class="form__group field">
-                                    <input type="input" class="form__field" placeholder="" name="Adi" id='name' required />
-                                    <label for="name" class="form__label">Sosyal Medya İsmi</label>
-                                </div>
-
-                                <div style="margin-bottom: 10px;" class="form__group field">
-                                    <input type="input" class="form__field" placeholder="" name="Link" id='name' required />
-                                    <label for="name" class="form__label">Sosyal Medya Linki</label>
-                                </div>
-
-
-                                <div style="margin-bottom: 10px;" class="form__group field">
-                                    <input type="input" class="form__field" placeholder="" name="Ikon" id='name' required />
-                                    <label for="name" class="form__label">İkon Değeri</label>
-                                </div>
-
-                                <div class="button_lay">
-                                    <button class="button" style="letter-spacing: 5px;" role="button">Kaydet</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-
-
+   
 
