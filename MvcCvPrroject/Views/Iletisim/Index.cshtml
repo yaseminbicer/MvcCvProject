@@ -7,44 +7,49 @@
 
 
 <!DOCTYPE html>
-<html>
-<body class="hold-transition sidebar-mini">
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        </div><!-- /.card-header -->
-                        <div class="card-body">
-                                <div class="tab-pane" id="timeline">
-                                    <!-- The timeline -->
-                                    <div class="timeline timeline-inverse">
-                                        @foreach(var item in Model)
-                                        {
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Material Design Inbox Expansion Animation</title>
+    <link rel="stylesheet" href="~/material-design-inbox-expansion-animation/dist/style.css">
 
-                                        <!-- timeline time label -->
-                                        <div class="time-label">
-                                            <span class="bg-gradient-secondary">
-                                                @(((DateTime)item.Tarih).ToString("dd-MMM-yyyy"))
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <i class="fas fa-comments bg-warning"></i>
-                                            <div class="timeline-item">
-                                                <span class="time"><i class="far fa-clock"></i>@item.Mail</span>
-                                                <h3 class="timeline-header"><a href="#">@item.AdSoyad</a>@item.Konu</h3>
-                                                <div class="timeline-body">
-                                                   @item.Mesaj
-                                                </div>
-                                            </div>
-                                        </div>
-                                        }
-                                    </div>
-                                </div>
-                        </div>
+</head>
+<body>
+    <!-- partial:index.partial.html -->
+    <div id="app">
+        <div class="header">
+            <h3 id="header-content">Mesajlar</h3>
+        </div>
+        <div class="list">
+            @foreach(var item in Model)
+            {
+                <div class="list-item" data-sender="@item.AdSoyad" data-subject="@item.Konu">
+                    <img src="https://i.pravatar.cc/100?img=1" />
+                    <div class="list-item-body">
+                        <p>@item.AdSoyad</p>
+                        <p>@item.Konu</p>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="details-view">
+            <h3 class="detail-heading"></h3>
+            <div class="sender">
+                <img id="sender-image" src="https://picsum.photos/100" />
+                <div class="list-item-body" id="message-details">
+                    <p></p>
+                    <p></p>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
-    </section>
+            <div class="message-body"></div>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src="~/material-design-inbox-expansion-animation/dist/script.js"></script>
 </body>
 </html>
+
+
+
+
+

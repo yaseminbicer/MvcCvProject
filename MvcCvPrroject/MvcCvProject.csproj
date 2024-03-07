@@ -2158,6 +2158,12 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="material-design-inbox-expansion-animation\dist\index.html" />
+    <Content Include="material-design-inbox-expansion-animation\dist\script.js" />
+    <Content Include="material-design-inbox-expansion-animation\dist\style.css" />
+    <Content Include="material-design-inbox-expansion-animation\LICENSE.txt" />
+    <Content Include="material-design-inbox-expansion-animation\src\index.html" />
+    <Content Include="material-design-inbox-expansion-animation\src\script.js" />
     <Content Include="Models\Entity\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -2451,6 +2457,8 @@
     <Content Include="pen-export-QWgrPvp\README.md" />
     <Content Include="responsive-contact-form\README.md" />
     <Content Include="responsive-contact-form\src\style.scss" />
+    <Content Include="material-design-inbox-expansion-animation\README.md" />
+    <Content Include="material-design-inbox-expansion-animation\src\style.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
