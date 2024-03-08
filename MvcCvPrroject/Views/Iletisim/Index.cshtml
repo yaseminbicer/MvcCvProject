@@ -23,6 +23,7 @@
         <div class="list">
             @foreach(var item in Model)
             {
+                <p class="list-heading"> @(((DateTime)item.Tarih).ToString("dd-MMM-yyyy"))</p>
                 <div class="list-item" data-sender="@item.AdSoyad" data-subject="@item.Konu">
                     <img src="https://i.pravatar.cc/100?img=1" />
                     <div class="list-item-body">
@@ -32,23 +33,25 @@
                 </div>
             }
         </div>
+
         <div class="details-view">
-            <h3 class="detail-heading"></h3>
-            <div class="sender">
-                <img id="sender-image" src="https://picsum.photos/100" />
-                <div class="list-item-body" id="message-details">
-                    <p></p>
-                    <p></p>
+            @foreach(var item in Model)
+            {
+                <h3 class="detail-heading">@item.Konu</h3>
+                <div class="sender">
+                    <img id="sender-image" src="" />
+                    <div class="list-item-body" id="message-details">
+                        <p>@item.AdSoyad</p>
+                    </div>
                 </div>
-            </div>
-            <div class="message-body"></div>
+                <div class="message-body">@item.Mesaj</div>
+            }
         </div>
     </div>
-    <!-- partial -->
     <script src="~/material-design-inbox-expansion-animation/dist/script.js"></script>
+
 </body>
 </html>
-
 
 
 

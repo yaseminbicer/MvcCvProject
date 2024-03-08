@@ -1,71 +1,72 @@
-﻿const listItems = document.querySelectorAll(".list-item");
+﻿const list = document.querySelector(".list");
+const detailsView = document.querySelector(".details-view");
+const headerRef = document.querySelector("#header-content");
 
-listItems.forEach(item => {
-    item.addEventListener("click", () => {
-        const sender = item.dataset.sender;
-        const subject = item.dataset.subject;
+const listItem = document.querySelector(".list-item");
 
-        document.querySelector(".detail-heading").textContent = subject;
-        document.querySelector("#sender-image").src = item.querySelector("img").src;
-        const messageDetails = document.querySelector("#message-details");
-        messageDetails.innerHTML = `
-                    <p>${item.querySelector(".list-item-body p:first-child").textContent}</p>
-                    <p>${item.querySelector(".list-item-body p:last-child").textContent}</p>
-                `;
+for (let i = 2; i < 10; i++) {
+  let newListItem = listItem.cloneNode(true);
+  newListItem.childNodes[1].src = `https://i.pravatar.cc/100?img=${i}`;
+  newListItem.childNodes[3].innerHTML = `
+  <p>User ${i}</p>
+  <p>Message Content ${i}</p>`;
+  list.appendChild(newListItem);
+}
+let bounds = {};
+let scaleX, scaleY;
+let selectedCard;
 
-        document.querySelector("#header-content").innerHTML = "Back";
+list.addEventListener("click", ({ target }) => {
+  selectedCard = target.closest(".list-item");
+  bounds = selectedCard.getBoundingClientRect();
+  scaleX = bounds.width / window.innerWidth;
+  scaleY = bounds.height / window.innerHeight;
+  console.log("Values while expanding: ", bounds, scaleX, scaleY);
+  storeCardInfo.img = selectedCard.childNodes[1].src;
+  let senderImage = document.querySelector("#sender-image");
+  let messageDetails = document.querySelector("#message-details");
+  senderImage.src = selectedCard.childNodes[1].src;
+  messageDetails.innerHTML = selectedCard.childNodes[3].innerHTML;
+  headerRef.innerHTML = "Back";
+  // Similarly get data for sender name, subject
+  detailsView.classList.add("opened");
 
-        const detailsView = document.querySelector(".details-view");
-        detailsView.classList.add("opened");
-
-        const bounds = item.getBoundingClientRect();
-        const scaleX = bounds.width / window.innerWidth;
-        const scaleY = bounds.height / window.innerHeight;
-
-        detailsView.animate(
-            [
-                {
-                    transform: `translate(${bounds.left}px, ${bounds.top}px) scale(${scaleX}, ${scaleY})`
-                },
-                {
-                    transform: `translate(0, 0) scale(1,1)`
-                }
-            ],
-            {
-                duration: 300,
-                fill: "forwards",
-                easing: "cubic-bezier(0.4, 0, 0.2, 1)"
-            }
-        );
-    });
+  detailsView.animate(
+    [
+      {
+        transform: `translate(${bounds.left}px, ${bounds.top}px) scale(${scaleX}, ${scaleY})`
+      },
+      {
+        transform: `translate(0, 0) scale(1,1)`
+      }
+    ],
+    {
+      duration: 300,
+      fill: "forwards",
+      easing: "cubic-bezier(0.4, 0, 0.2, 1)"
+    }
+  );
 });
 
-document.querySelector("#header-content").addEventListener("click", ({ target }) => {
-    console.log("clicked header");
-    if (target.innerHTML === "Back") {
-        const detailsView = document.querySelector(".details-view");
-        detailsView.classList.remove("opened");
-
-        const bounds = selectedCard.getBoundingClientRect();
-        const scaleX = bounds.width / window.innerWidth;
-        const scaleY = bounds.height / window.innerHeight;
-
-        document.querySelector("#header-content").innerHTML = "Inbox";
-
-        detailsView.animate(
-            [
-                {
-                    transform: `translate(0, 0) scale(1,1)`
-                },
-                {
-                    transform: `translate(${bounds.left}px, ${bounds.top}px) scale(${scaleX}, ${scaleY})`
-                }
-            ],
-            {
-                duration: 300,
-                fill: "backwards",
-                easing: "cubic-bezier(0.4, 0, 0.2, 1)"
-            }
-        );
-    }
+headerRef.addEventListener("click", ({ target }) => {
+  console.log("clicked header");
+  if (headerRef.innerHTML === "Back") {
+    detailsView.classList.remove("opened");
+    headerRef.innerHTML = "Inbox";
+    detailsView.animate(
+      [
+        {
+          transform: `translate(0, 0) scale(1,1)`
+        },
+        {
+          transform: `translate(${bounds.left}px, ${bounds.top}px) scale(${scaleX}, ${scaleY})`
+        }
+      ],
+      {
+        duration: 300,
+        fill: "backwards",
+        easing: "cubic-bezier(0.4, 0, 0.2, 1)"
+      }
+    );
+  }
 });
