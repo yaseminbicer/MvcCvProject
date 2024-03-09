@@ -63,7 +63,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ProjeBasligi" Type="varchar" MaxLength="30" />
+          <Property Name="ProjeAdi" Type="varchar" MaxLength="30" />
           <Property Name="Teknolojiler" Type="varchar" MaxLength="100" />
           <Property Name="Link" Type="varchar(max)" />
         </EntityType>
@@ -204,9 +204,9 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ProjeBasligi" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Teknolojiler" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProjeAdi" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblReferanslarim">
           <Key>
@@ -312,9 +312,9 @@
           <EntitySetMapping Name="tblProjelerim">
             <EntityTypeMapping TypeName="dbModel.tblProjelerim">
               <MappingFragment StoreEntitySet="tblProjelerim">
+                <ScalarProperty Name="ProjeAdi" ColumnName="ProjeAdi" />
                 <ScalarProperty Name="Link" ColumnName="Link" />
                 <ScalarProperty Name="Teknolojiler" ColumnName="Teknolojiler" />
-                <ScalarProperty Name="ProjeBasligi" ColumnName="ProjeBasligi" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

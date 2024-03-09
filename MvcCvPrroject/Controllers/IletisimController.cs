@@ -17,5 +17,11 @@ namespace MvcCvPrroject.Controllers
             var mesajlar = repo.List();
             return View(mesajlar);
         }
+        public ActionResult MailSil(int id)
+        {
+                var mail = repo.Find(x => x.ID == id);
+                repo.TDelete(mail);
+                return RedirectToAction("Index");
+        }
     }
 }

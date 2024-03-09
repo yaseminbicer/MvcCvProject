@@ -15,8 +15,8 @@ namespace MvcCvPrroject.Models.Entity
     public partial class tblProjelerim
     {
         public int ID { get; set; }
-        public string ProjeBasligi { get; set; }
         public string Teknolojiler { get; set; }
         public string Link { get; set; }
+        public string ProjeAdi { get; set; }
     }
 }

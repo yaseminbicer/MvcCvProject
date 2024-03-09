@@ -1,0 +1,54 @@
+﻿@using MvcCvPrroject.Models.Entity
+@model List<tblProjelerim>
+
+@{
+    ViewBag.Title = "YeniProje";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deneyim Ekle</title>
+    <link rel='stylesheet' href='https://codepen.io/uzcho_/pen/RmOWmw.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
+    <link rel="stylesheet" href="~/responsive-contact-form/dist/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+    <form method="post">
+        <div style="margin-top:5rem;" class="resume-section-content">
+
+            <div class="field" tabindex="1">
+                <label for="ProjeAdi">
+                  Proje Adı
+                </label>
+                <input name="ProjeAdi" type="text" required></input>
+            </div>
+            <div class="field" tabindex="2">
+                <label for="Teknolojiler">
+                 Teknolojiler
+                </label>
+                <input name="Teknolojiler" type="text" required></input>
+            </div>
+            <div class="field" tabindex="3">
+                <label for="Link">
+                 Github Linki
+                </label>
+                <input name="Link" type="text" required></input>
+            </div>
+            
+            <button type="submit">Kaydet</button>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
