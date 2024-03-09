@@ -7,78 +7,80 @@
 
 @{string renk="";}
 @{string labelRenk = "";}
+<link rel="stylesheet" href="~/responsive-contact-form/dist/style.css"> 
+
 <!DOCTYPE html>
 <html>
 <body >
-    <div style="width:100%" class="col-md-10">
-                            <div class="card">
-                                <div style="margin-top:5rem;" class="card-body">
+    <div style="width:100%" class="col-md-12">
+        <div style="margin-top:5rem;" class="col-md-12" class="card-body">
 
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 10px">#</th>
-                                                <th>Yetenek</th>
-                                                <th>Derece</th>
-                                                <th style="width: 40px">Oran</th>
-                                                <th style="width: 110px">Düzenle</th>
-                                                <th style="width: 80px">Sil</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach(var item in Model)
-                                            {
-                                                if(item.Oran <= 50 && item.Oran >= 0)
-                                                {
-                                                    renk = "progress-bar bg-danger";
-                                                    labelRenk = "badge bg-danger";
-                                                }
-                                                if(item.Oran >= 51 && item.Oran <= 70)
-                                                {
-                                                    renk = "progress-bar bg-warning";
-                                                    labelRenk = "badge bg-warning";
-                                                }
-                                                if(item.Oran >= 71 && item.Oran <= 84)
-                                                {
-                                                    renk = "progress-bar bg-primary";
-                                                    labelRenk = "badge bg-primary";
-                                                }
-                                                if(item.Oran >= 85 && item.Oran <= 100)
-                                                {
-                                                    renk = "progress-bar bg-success";
-                                                    labelRenk = "badge bg-success";
-                                                }
-                                                <tr>
-                                                    <td>@item.ID</td>
-                                                    <td>@item.Yetenek</td>
-                                                    <td>
-                                                        <div class="progress progress-xs">
-                                                            <div class="@renk" style="width: @item.Oran%"></div>
-                                                        </div>
-                                                    </td>
-                                                    <td><span class="@labelRenk">@item.Oran%</span></td>
-                                                    <td>
-                                                        <a class="btn btn-info btn-sm" href="~/Yeteneklerim/YetenekDuzenle/@item.ID">
-                                                            <i class="fas fa-pencil-alt">
-                                                            </i>
-                                                            Düzenle
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a class="btn btn-danger btn-sm" href="~/Yeteneklerim/YetenekSil/@item.ID">
-                                                            <i class="fas fa-trash">
-                                                            </i>
-                                                            Sil
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            }
-                                        </tbody>
-                                    </table>
-                                    <a href="~/Yeteneklerim/YeniYetenek/" class="btn btn-info">Yeni Yetenek Ekle</a>
+            <table class="table table-bordered">
+                <thead>
+                    <tr style="background: #343a40; color:white;">
+                        <th style="width: 10px">#</th>
+                        <th>Yetenek</th>
+                        <th>Derece</th>
+                        <th style="width: 40px">Oran</th>
+                        <th style="width: 110px">Düzenle</th>
+                        <th style="width: 80px">Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                        if(item.Oran <= 50 && item.Oran >= 0)
+                        {
+                            renk = "progress-bar bg-danger";
+                            labelRenk = "badge bg-danger";
+                        }
+                        if(item.Oran >= 51 && item.Oran <= 70)
+                        {
+                            renk = "progress-bar bg-warning";
+                            labelRenk = "badge bg-warning";
+                        }
+                        if(item.Oran >= 71 && item.Oran <= 84)
+                        {
+                            renk = "progress-bar bg-primary";
+                            labelRenk = "badge bg-primary";
+                        }
+                        if(item.Oran >= 85 && item.Oran <= 100)
+                        {
+                            renk = "progress-bar bg-success";
+                            labelRenk = "badge bg-success";
+                        }
+                        <tr>
+                            <td>@item.ID</td>
+                            <td>@item.Yetenek</td>
+                            <td>
+                                <div class="progress progress-xs">
+                                    <div class="@renk" style="width: @item.Oran%"></div>
                                 </div>
-                            </div>
-                </div>
+                            </td>
+                            <td><span class="@labelRenk">@item.Oran%</span></td>
+                            <td>
+                                <a style="background:#808080" class="btn btn-info btn-sm" href="~/Yeteneklerim/YetenekDuzenle/@item.ID">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Düzenle
+                                </a>
+                            </td>
+                            <td>
+                                <a style="background:#808080" class="btn btn-danger btn-sm" href="~/Yeteneklerim/YetenekSil/@item.ID">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Sil
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <button a href="~/Yeteneklerim/YeniYetenek/" type="submit">Yeni Yetenek Ekle</button>
+        <a href="~/Yeteneklerim/YeniYetenek/" class="btn btn-info">Yeni Yetenek Ekle</a>
+
+    </div>
         
 </body>
 </html>

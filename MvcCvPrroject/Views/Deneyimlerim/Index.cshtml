@@ -9,75 +9,134 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Deneyimlerim</title>
-    <link rel="stylesheet" href="~/tableDesign/dist/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/AdminDesign/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="~/AdminDesign/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="~/responsive-contact-form/dist/style.css">
 </head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
 
-<body>
-    <div style="width:100%;" class="table">
-        <div class="table-header">
-            <div class="header__item"><a id="ID" class="filter__link" href="#">ID</a></div>
-            <div class="header__item"><a id="Baslik" class="filter__link filter__link--number" href="#">Başlık</a></div>
-            <div class="header__item"><a id="AltBaslik" class="filter__link filter__link--number" href="#">Alt Başlık</a></div>
-            <div class="header__item"><a id="Tarih" class="filter__link filter__link--number" href="#">Tarih</a></div>
-            <div class="header__item"><a id="DeneyimSil" class="filter__link filter__link--number" href="#"></a></div>
-        </div>
-        <div class="table-content">
-            <div>
-                @foreach(var item in Model)
-                {
-                    <div class="table-row">
-                        <div class="table-data">@item.ID</div>
-                        <div class="table-data">@item.Baslik</div>
-                        <div class="table-data">@item.AltBaslik</div>
-                        <div class="table-data">@item.Tarih</div>
-                        <div class="delete-button" href="~/Deneyimlerim/DeneyimSil/@item.ID">
-                            <i class="fas fa-trash"></i>
-                        </div>
-                        <div class="edit-button">
-                            <i class="fas fa-edit" href="~/Deneyimlerim/DeneyimDuzenle/@item.ID"></i>
+        <div class="content-wrapper" style="margin-left:0px; min-height:764px">
+            <!-- Content Header (Page header) -->
+            <section style="margin-top:57px; padding-top: 0px;" class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+
+                        <div class="col-sm-6">
                         </div>
                     </div>
-                }
+                </div><!-- /.container-fluid -->
+            </section>
 
-            </div>
+            <!-- Main content -->
+            <section class="content">
+
+                <!-- Default box -->
+                <div class="card">
+
+                    <div class="card-body p-0">
+                        <table class="table table-striped projects">
+                            <thead>
+                                <tr style="background: #343a40; min-height:50px; color:white">
+
+                                    <th style="width: 1%">
+                                        ID
+                                    </th>
+                                    <th style="width: 25%">
+                                        Başlık
+                                    </th>
+                                    <th style="width: 25%">
+                                        Alt Başlık
+                                    </th>
+                                    <th style="width: 25%">
+                                        Tarih
+                                    </th>
+                                    <th style="width: 40%">
+
+                                    </th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach(var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.ID
+                                        </td>
+                                        <td>
+                                            @item.Baslik
+                                        </td>
+                                        <td>
+                                            <a>
+                                                @item.AltBaslik
+                                            </a>
+                                            <br />
+                                        </td>
+                                        <td>
+                                            <a>
+                                                @item.Tarih
+                                            </a>
+                                            <br />
+                                        </td>
+                                        <td class="project-actions text-right">
+
+                                            <a style="background:#808080"  class="btn btn-info btn-sm" href="~/Deneyimlerim/DeneyimDuzenle/@item.ID">
+                                                <i class="fas fa-pencil-alt">
+                                                </i>
+                                                Düzenle
+                                            </a>
+                                            <a style="background:#808080"  class="btn btn-danger btn-sm" href="~/Deneyimlerim/DeneyimSil/@item.ID">
+                                                <i class="fas fa-trash">
+                                                </i>
+                                                Sil
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+            </section>
+            <button a href="~/Deneyimlerim/DeneyimEkle/" type="submit">Yeni Deneyim Ekle</button>
+            <!-- /.content -->
         </div>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
     </div>
-    <a href="~/Deneyimlerim/DeneyimEkle/" class="btn btn-primary">Yeni Deneyim Ekle</a>
+
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
 </body>
 </html>
-    @*</div>
-        <h2>Index</h2>
-        <br />
-        <h2>Deneyim Listesi</h2>
-        <table class="table table-bordered">
-            <tr>
-                <th>ID</th>
-                <th>Başlık</th>
-                <th>Alt Başlık</th>
-                <th>Tarih</th>
-                <th>Sil</th>
-                <th>Düzenle</th>
-            </tr>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.ID</td>
-                    <td>@item.Baslik</td>
-                    <td>@item.AltBaslik</td>
-                    <td>@item.Tarih</td>
-                    <td><a href="~/Deneyimlerim/DeneyimSil/@item.ID" class="btn btn-danger">Sil</a></td>
-                    <td><a href="~/Deneyimlerim/DeneyimGetir/@item.ID" class="btn btn-warning">Düzenle</a></td>
-                </tr>
-
-            }
-
-        </table>*@
-   
-
 
 

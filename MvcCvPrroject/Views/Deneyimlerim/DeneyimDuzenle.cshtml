@@ -1,10 +1,8 @@
-﻿@using MvcCvPrroject.Models.Entity
-@model MvcCvPrroject.Models.Entity.tblEgitimlerim
+﻿@model MvcCvPrroject.Models.Entity.tblDeneyimlerim
 @{
-    ViewBag.Title = "EgitimDuzenle";
+    ViewBag.Title = "DeneyimGetir";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,16 +28,10 @@
                 <input name="Baslik" type="text" required></input>
             </div>
             <div class="field" tabindex="2">
-                <label for="AlBaslik1">
-                    Alt Başlık 1
+                <label for="AlBaslik">
+                    Alt Başlık 
                 </label>
-                <input name="AltBaslik1" type="text" required></input>
-            </div>
-            <div class="field" tabindex="3">
-                <label for="AltBaslik2">
-                    Alt Başlık 2
-                </label>
-                <input name="AltBaslik2" type="text" required></input>
+                <input name="AltBaslik" type="text" required></input>
             </div>
             <div class="field" tabindex="4">
                 <label for="Tarih">
@@ -48,10 +40,10 @@
                 <input name="Tarih" type="text" required></input>
             </div>
             <div class="field" tabindex="5">
-                <label for="GNO">
-                    Genel Not Ortalaması
+                <label for="Aciklama">
+                    Açıklama
                 </label>
-                <input name="GNO" type="text" required></input>
+                <input name="Aciklama" type="text" required></input>
             </div>
 
             <button type="submit">Güncelle</button>
@@ -60,5 +52,3 @@
     </form>
 </body>
 </html>
-
-

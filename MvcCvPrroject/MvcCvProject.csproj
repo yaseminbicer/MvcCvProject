@@ -242,6 +242,7 @@
     <Compile Include="Controllers\IletisimController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProjelerimController.cs" />
+    <Compile Include="Controllers\ReferanslarimController.cs" />
     <Compile Include="Controllers\SertifikalarimController.cs" />
     <Compile Include="Controllers\SosyalMedyaController.cs" />
     <Compile Include="Controllers\YeteneklerimController.cs" />
@@ -2495,7 +2496,7 @@
     <Content Include="Views\Hakkimda\Index.cshtml" />
     <Content Include="Views\Deneyimlerim\Index.cshtml" />
     <Content Include="Views\Deneyimlerim\DeneyimEkle.cshtml" />
-    <Content Include="Views\Deneyimlerim\DeneyimGetir.cshtml" />
+    <Content Include="Views\Deneyimlerim\DeneyimDuzenle.cshtml" />
     <Content Include="Views\Yeteneklerim\Index.cshtml" />
     <Content Include="Views\Yeteneklerim\YeniYetenek.cshtml" />
     <Content Include="Views\Yeteneklerim\YetenekDuzenle.cshtml" />
@@ -2516,6 +2517,11 @@
     <Content Include="tableDesign\src\style.scss" />
     <Content Include="Views\Projelerim\Index.cshtml" />
     <Content Include="Views\Projelerim\YeniProje.cshtml" />
+    <Content Include="Views\Projelerim\ProjeDuzenle.cshtml" />
+    <Content Include="Views\Referanslarim\Index.cshtml" />
+    <Content Include="Views\Referanslarim\ReferansDuzenle.cshtml" />
+    <Content Include="Views\Referanslarim\YeniReferans.cshtml" />
+    <Content Include="Views\Iletisim\MailOku.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

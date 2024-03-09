@@ -35,13 +35,13 @@ namespace MvcCvPrroject.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult DeneyimGetir(int id)
+        public ActionResult DeneyimDuzenle(int id)
         {
             tblDeneyimlerim t = repo.Find(x => x.ID == id);
             return View(t);
         }
         [HttpPost]
-        public ActionResult DeneyimGetir(tblDeneyimlerim p)
+        public ActionResult DeneyimDuzenle(tblDeneyimlerim p)
         {
             tblDeneyimlerim t = repo.Find(x => x.ID == p.ID);
             t.Baslik=p.Baslik;

@@ -4,16 +4,43 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<br />
-<h4>Yetenek Düzenleme Sayfası</h4>
-<br />
-<form method="post">
-    @Html.Label("Yetenek Açıklaması")
-    @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control" })
-    <br />
-    @Html.Label("Derece")
-    @Html.TextBoxFor(x => x.Oran, new { @class = "form-control" })
-    <br />
 
-    <button class="btn btn-info">Güncelle</button>
-</form>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yetenek Düzenle</title>
+    <link rel='stylesheet' href='https://codepen.io/uzcho_/pen/RmOWmw.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
+    <link rel="stylesheet" href="~/responsive-contact-form/dist/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+    <form method="post">
+        <div style="margin-top:5rem;" class="resume-section-content">
+
+            <div class="field" tabindex="1">
+                <label for="Yetenek">
+                    Yetenek
+                </label>
+                <input name="Yetenek" type="text" required></input>
+            </div>
+            <div class="field" tabindex="2">
+                <label for="Oran">
+                    Derece
+                </label>
+                <input name="Oran" type="text" required></input>
+            </div>
+
+            <button type="submit">Güncelle</button>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
+
