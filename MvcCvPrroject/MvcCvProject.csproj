@@ -2522,6 +2522,7 @@
     <Content Include="Views\Referanslarim\ReferansDuzenle.cshtml" />
     <Content Include="Views\Referanslarim\YeniReferans.cshtml" />
     <Content Include="Views\Iletisim\MailOku.cshtml" />
+    <Content Include="Views\SosyalMedya\YeniEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

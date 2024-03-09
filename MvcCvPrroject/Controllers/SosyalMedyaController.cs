@@ -18,12 +18,12 @@ namespace MvcCvPrroject.Controllers
             return View(veriler);
         }
         [HttpGet]
-        public ActionResult Ekle()
+        public ActionResult YeniEkle()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Ekle(tblSosyalMedya p)
+        public ActionResult YeniEkle(tblSosyalMedya p)
         {
             repo.TAdd(p);
             return RedirectToAction("Index");

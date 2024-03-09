@@ -3,20 +3,42 @@
     ViewBag.Title = "YeniSertifika";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<br />
-<h4>Yeni Sertifika Ekleme Sayfası</h4>
-<br />
-<form method="post">
-    @Html.Label("Sertifika Açıklaması")
-    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
-    <br />
-    @Html.Label("Derece")
-    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
-    <br />
 
-    <button class="btn btn-primary">Kaydet</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sertifika Ekle</title>
+    <link rel='stylesheet' href='https://codepen.io/uzcho_/pen/RmOWmw.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
+    <link rel="stylesheet" href="~/IletisimDesign/dist/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
+</head>
 
+<body>
 
+    <form method="post">
+        <div style="margin-top:5rem;" class="resume-section-content">
+
+            <div class="field" tabindex="1">
+                <label for="Tarih">
+                    <i class="fa fa-text-width"></i>
+                    Tarih
+                </label>
+                <input name="Tarih" type="text" required></input>
+            </div>
+            <div class="field" tabindex="2">
+                <label for="Aciklama">
+                    <i class="fa fa-code"></i>
+                    Açıklama
+                </label>
+                <input name="Aciklama" type="text" required></input>
+            </div>
+            <button type="submit">Kaydet</button>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
 

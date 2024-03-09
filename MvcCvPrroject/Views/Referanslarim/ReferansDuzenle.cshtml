@@ -1,8 +1,63 @@
-﻿
+﻿@model MvcCvPrroject.Models.Entity.tblReferanslarim
 @{
     ViewBag.Title = "ReferansDuzenle";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>ReferansDuzenle</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Referans Ekle</title>
+    <link rel='stylesheet' href='https://codepen.io/uzcho_/pen/RmOWmw.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
+    <link rel="stylesheet" href="~/IletisimDesign/dist/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+    <form method="post">
+        <div style="margin-top:5rem;" class="resume-section-content">
+
+            <div class="field" tabindex="1">
+                <label for="AdSoyad">
+                    <i class="fa fa-user"></i>
+                    Ad Soyad
+                </label>
+                <input name="AdSoyad" type="text" class="form-control" value="@Model.AdSoyad" required></input>
+            </div>
+            <div class="field" tabindex="2">
+                <label for="Resim">
+                    <i class="fa fa-camera"></i>
+                    Resim
+                </label>
+                <input name="Resim" type="text" class="form-control" value="@Model.Resim" required></input>
+            </div>
+            <div class="field" tabindex="3">
+                <label for="Mail">
+                    <i class="fa fa-envelope"></i>
+                    Mail
+                </label>
+                <input name="Mail" type="text" class="form-control" value="@Model.Mail" required></input>
+            </div>
+            <div class="field" tabindex="4">
+                <label for="Aciklama">
+                    <i class="fa fa-text-width"></i>
+                    Açıklama
+                </label>
+                <input name="Aciklama" type="text" class="form-control" value="@Model.Aciklama" required></input>
+            </div>
+            <button type="submit">Kaydet</button>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+
 

@@ -1,6 +1,6 @@
 ﻿@model MvcCvPrroject.Models.Entity.tblDeneyimlerim
 @{
-    ViewBag.Title = "DeneyimGetir";
+    ViewBag.Title = "DeneyimDuzenle";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -11,13 +11,12 @@
     <title>Deneyim Ekle</title>
     <link rel='stylesheet' href='https://codepen.io/uzcho_/pen/RmOWmw.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
-    <link rel="stylesheet" href="~/responsive-contact-form/dist/style.css">
+    <link rel="stylesheet" href="~/IletisimDesign/dist/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
 
 <body>
-
     <form method="post">
         <div style="margin-top:5rem;" class="resume-section-content">
 
@@ -25,30 +24,31 @@
                 <label for="Baslik">
                     Başlık
                 </label>
-                <input name="Baslik" type="text" required></input>
+                <input name="Baslik" type="text" class="form-control" value="@Model.Baslik" required></input>
             </div>
             <div class="field" tabindex="2">
                 <label for="AlBaslik">
-                    Alt Başlık 
+                    Alt Başlık
                 </label>
-                <input name="AltBaslik" type="text" required></input>
+                <input name="AltBaslik" type="text" class="form-control" value="@Model.AltBaslik" required></input>
             </div>
-            <div class="field" tabindex="4">
+            <div class="field" tabindex="3">
                 <label for="Tarih">
                     Tarih
                 </label>
-                <input name="Tarih" type="text" required></input>
+                <input name="Tarih" type="text" class="form-control" value="@Model.Tarih" required></input>
             </div>
-            <div class="field" tabindex="5">
+            <div class="field" tabindex="4">
                 <label for="Aciklama">
                     Açıklama
                 </label>
-                <input name="Aciklama" type="text" required></input>
+                <input name="Aciklama" type="text" class="form-control" value="@Model.Aciklama" required></input>
             </div>
 
             <button type="submit">Güncelle</button>
         </div>
-        </div>
+
     </form>
+
 </body>
 </html>

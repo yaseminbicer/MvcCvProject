@@ -1,8 +1,13 @@
-﻿@model MvcCvPrroject.Models.Entity.tblSertifikalarim
+﻿
+@using MvcCvPrroject.Models.Entity
+@model List<tblSosyalMedya>
+
 @{
-    ViewBag.Title = "SertifikaGetir";
+    ViewBag.Title = "YeniEkle";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,28 +21,40 @@
 </head>
 
 <body>
+
     <form method="post">
         <div style="margin-top:5rem;" class="resume-section-content">
 
             <div class="field" tabindex="1">
-                <label for="Tarih">
-                    Tarih
+                <label for="Adi">
+                    <i class="fa fa-text-width"></i>
+                    Sosyal Medya Adı
                 </label>
-                <input name="Tarih" type="text" class="form-control" value="@Model.Tarih" required></input>
+                <input name="Adi" type="text" required></input>
             </div>
             <div class="field" tabindex="2">
-                <label for="Aciklama">
-                    Açıklama
+                <label for="Link">
+                    <i class="fa fa-code"></i>
+                    Linki
                 </label>
-                <input name="Aciklama" type="text" class="form-control" value="@Model.Aciklama" required></input>
+                <input name="Link" type="text" required></input>
+            </div>
+            <div class="field" tabindex="3">
+                <label for="Ikon">
+                    <i class="fa fa-code"></i>
+                    Ikon
+                </label>
+                <input name="Ikon" type="text" required></input>
             </div>
 
-            <button type="submit">Güncelle</button>
+            <button type="submit">Kaydet</button>
         </div>
-
+        </div>
     </form>
-
 </body>
 </html>
+
+
+
 
 

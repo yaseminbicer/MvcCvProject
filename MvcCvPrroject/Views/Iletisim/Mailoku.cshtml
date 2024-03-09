@@ -1,5 +1,4 @@
-﻿@using MvcCvPrroject.Models.Entity
-@model List<tblIletisim>
+﻿@model MvcCvPrroject.Models.Entity.tblIletisim
 @{
     ViewBag.Title = "Mailoku";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -48,16 +47,20 @@
                                 <!-- /.card-header -->
                                 <div class="card-body p-0">
                                     <div class="mailbox-read-info">
-                                        @foreach(var item in Model)
-                                        {
-                                            <h5>@item.Konu</h5>
-
-                                            <h6>
-                                                From: @item.Mail
-                                                <span class="mailbox-read-time float-right">@item.Tarih</span>
-                                            </h6>
-                                        }
+                                        <div class="field" tabindex="2">
+                                            <h5 for="AlBaslik">
+                                                Konu
+                                            </h5>
+                                            <input name="Konu" type="text" class="form-control" value="@Model.Konu" required></input>
                                         </div>
+                                        <div class="field" tabindex="2">
+                                            <h6 for="Mail">
+                                                From: Konu
+                                            </h6>
+                                            <span class="mailbox-read-time float-right">@Model.Tarih</span>
+                                            <input name="Mail" type="text" class="form-control" value="@Model.Mail" required></input>
+                                        </div>
+                                    </div>
                                     
                                         <!-- /.mailbox-read-info -->
                                         <div class="mailbox-controls with-border text-center">
@@ -79,18 +82,22 @@
                                         </div>
                                         <!-- /.mailbox-controls -->
                                         <div class="mailbox-read-message">
-                                            @foreach(var item in Model)
-                                            {
-                                                <p>Hello John,</p>
 
-                                                <p>
-                                                    @item.Mesaj
+                                            <p>Hello John,</p>
+                                            <div class="field" tabindex="2">
+                                                <p for="AlBaslik">
+                                                    Mesaj
                                                 </p>
+                                                <input name="Mesaj" type="text" class="form-control" value="@Model.Mesaj" required></input>
+                                            </div>
 
-
-
-                                                <p>Thanks,<br>@item.AdSoyad</p>
-                                            }
+                                            <div class="field" tabindex="2">
+                                                <p for="AlBaslik">
+                                                    Thanks
+                                                </p>
+                                                <input name="AdSoyad" type="text" class="form-control" value="@Model.AdSoyad" required></input>
+                                            </div>
+                                           
                                         </div>
                                         <!-- /.mailbox-read-message -->
                                     </div>

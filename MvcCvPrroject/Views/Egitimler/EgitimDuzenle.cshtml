@@ -13,7 +13,7 @@
     <title>Deneyim Ekle</title>
     <link rel='stylesheet' href='https://codepen.io/uzcho_/pen/RmOWmw.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
-    <link rel="stylesheet" href="~/responsive-contact-form/dist/style.css">
+    <link rel="stylesheet" href="~/IletisimDesign/dist/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
@@ -27,31 +27,31 @@
                 <label for="Baslik">
                     Başlık
                 </label>
-                <input name="Baslik" type="text" required></input>
+                <input name="Baslik" type="text" class="form-control" value="@Model.Baslik" required></input>
             </div>
             <div class="field" tabindex="2">
                 <label for="AlBaslik1">
                     Alt Başlık 1
                 </label>
-                <input name="AltBaslik1" type="text" required></input>
+                <input name="AltBaslik1" type="text" class="form-control"value="@Model.AltBaslik1" required></input>
             </div>
             <div class="field" tabindex="3">
                 <label for="AltBaslik2">
                     Alt Başlık 2
                 </label>
-                <input name="AltBaslik2" type="text" required></input>
+                <input name="AltBaslik2" type="text" class="form-control" value="@Model.AltBaslik2" required></input>
             </div>
             <div class="field" tabindex="4">
                 <label for="Tarih">
                     Tarih
                 </label>
-                <input name="Tarih" type="text" required></input>
+                <input name="Tarih" type="text" class="form-control" value="@Model.Tarih" required></input>
             </div>
             <div class="field" tabindex="5">
                 <label for="GNO">
                     Genel Not Ortalaması
                 </label>
-                <input name="GNO" type="text" required></input>
+                <input name="GNO" type="text" class="form-control" value="@Model.GNO" required></input>
             </div>
 
             <button type="submit">Güncelle</button>

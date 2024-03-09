@@ -15,7 +15,7 @@
     <title>Proje Düzenle</title>
     <link rel='stylesheet' href='https://codepen.io/uzcho_/pen/RmOWmw.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
-    <link rel="stylesheet" href="~/responsive-contact-form/dist/style.css">
+    <link rel="stylesheet" href="~/IletisimDesign/dist/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 </head>
@@ -29,19 +29,19 @@
                 <label for="ProjeAdi">
                     Proje Adı
                 </label>
-                <input name="ProjeAdi" type="text" required></input>
+                <input name="ProjeAdi" type="text" class="form-control" value="@Model.ProjeAdi" required></input>
             </div>
             <div class="field" tabindex="2">
                 <label for="Teknolojiler">
                     Teknolojiler
                 </label>
-                <input name="Teknolojiler" type="text" required></input>
+                <input name="Teknolojiler" type="text" class="form-control" value="@Model.Teknolojiler" required></input>
             </div>
             <div class="field" tabindex="3">
                 <label for="Link">
                     Github Linki
                 </label>
-                <input name="Link" type="text" required></input>
+                <input name="Link" type="text" class="form-control" value="@Model.Link" required></input>
             </div>
             <button type="submit">Güncelle</button>
         </div>

@@ -75,6 +75,7 @@
           <Property Name="AdSoyad" Type="varchar" MaxLength="50" />
           <Property Name="Mail" Type="varchar" MaxLength="100" />
           <Property Name="Aciklama" Type="varchar(max)" />
+          <Property Name="Resim" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="tblSertifikalarim">
           <Key>
@@ -216,6 +217,7 @@
           <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblSosyalMedya">
           <Key>
@@ -322,6 +324,7 @@
           <EntitySetMapping Name="tblReferanslarim">
             <EntityTypeMapping TypeName="dbModel.tblReferanslarim">
               <MappingFragment StoreEntitySet="tblReferanslarim">
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
                 <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />

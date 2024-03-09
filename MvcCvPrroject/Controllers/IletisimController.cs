@@ -23,6 +23,7 @@ namespace MvcCvPrroject.Controllers
                 repo.TDelete(mail);
                 return RedirectToAction("Index");
         }
+        [HttpGet]
         public ActionResult MailOku(int id)
         {
             tblIletisim mail = repo.Find(x => x.ID == id);
