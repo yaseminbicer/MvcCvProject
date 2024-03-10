@@ -40,9 +40,13 @@ namespace MvcCvPrroject.Controllers
             return View(yetenek);
         }
         [HttpPost]
-        public ActionResult YetenekDuzenle()
+        public ActionResult YetenekDuzenle(tblYeteneklerim p)
         {
-            return View();
+            tblYeteneklerim t = repo.Find(x => x.ID == p.ID);
+            t.Yetenek = p.Yetenek;
+            t.Oran = p.Oran;
+            repo.TUpdate(t);
+            return RedirectToAction("Index");
         }
     }
 }

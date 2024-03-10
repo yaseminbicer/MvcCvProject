@@ -48,8 +48,7 @@ namespace MvcCvPrroject.Controllers
         public ActionResult Sil(int id)
         {
             var hesap = repo.Find(x => x.ID == id);
-            hesap.Durum = false;
-            repo.TUpdate(hesap);
+            repo.TDelete(hesap);
             return RedirectToAction("Index");
         }
     }

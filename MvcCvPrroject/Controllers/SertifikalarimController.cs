@@ -25,7 +25,7 @@ namespace MvcCvPrroject.Controllers
             return View(sertifika);
         }
         [HttpPost]
-        public ActionResult SertifikaGeitr(tblSertifikalarim t)
+        public ActionResult SertifikaGetir(tblSertifikalarim t)
         {
             var sertifika = repo.Find(x => x.ID == t.ID);
             sertifika.Aciklama = t.Aciklama;

@@ -1,4 +1,5 @@
-﻿@model MvcCvPrroject.Models.Entity.tblSertifikalarim
+﻿@using MvcCvPrroject.Models.Entity
+@model MvcCvPrroject.Models.Entity.tblSertifikalarim
 @{
     ViewBag.Title = "SertifikaGetir";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -20,13 +21,13 @@
         <div style="margin-top:5rem;" class="resume-section-content">
 
             <div class="field" tabindex="1">
-                <label for="Tarih">
+                <label for="Tarih"><i class="fa fa-calendar"></i>
                     Tarih
                 </label>
                 <input name="Tarih" type="text" class="form-control" value="@Model.Tarih" required></input>
             </div>
             <div class="field" tabindex="2">
-                <label for="Aciklama">
+                <label for="Aciklama"><i class="fa fa-edit"></i>
                     Açıklama
                 </label>
                 <input name="Aciklama" type="text" class="form-control" value="@Model.Aciklama" required></input>

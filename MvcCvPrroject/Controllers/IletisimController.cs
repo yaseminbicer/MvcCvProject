@@ -11,7 +11,7 @@ namespace MvcCvPrroject.Controllers
     public class IletisimController : Controller
     {
         // GET: Iletisim
-        GenericRepository<tblIletisim> repo=new GenericRepository<tblIletisim>();
+        GenericRepository<tblIletisim> repo =new GenericRepository<tblIletisim>();
         public ActionResult Index()
         {
             var mesajlar = repo.List();
@@ -26,9 +26,9 @@ namespace MvcCvPrroject.Controllers
         [HttpGet]
         public ActionResult MailOku(int id)
         {
-            tblIletisim mail = repo.Find(x => x.ID == id);
+           var mail = repo.Find(x => x.ID == id);
+          return View(mail);
             
-            return View(mail);
         }
 
     }

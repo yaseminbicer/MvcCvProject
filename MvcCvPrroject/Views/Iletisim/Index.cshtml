@@ -39,7 +39,7 @@
         <section class="content">
             <div class="row" style="justify-content:center">
                 <!-- /.col -->
-                <div class="col-md-11">
+                <div class="col-md-9">
                     <div style="border-top:none" class="card card-primary card-outline">
                         <div style="background: #343a40; color:white; border-top:none" class="card-header">
                             <h3 class="card-title">Gelen Kutusu</h3>
@@ -62,12 +62,12 @@
                                 <button type="button" class="btn btn-default btn-sm checkbox-toggle">
                                     <i class="far fa-square"></i>
                                 </button>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt" href="~/Iletisim/Iletisimil" ></i></button>
-                                        <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
-                                        <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt" href="~/Iletisim/IletisimSil"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
 
-                                    </div>
+                                </div>
                                 <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
                                 <div class="float-right">
                                     1-50/200
@@ -92,7 +92,7 @@
                                                 </td>
 
                                                 <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                                <td class="mailbox-name"><a href="~/Iletisim/MailOku/@item.ID;" data-id="@item.ID">@item.AdSoyad</a></td>
+                                                <td class="mailbox-name"><a href="~/Iletisim/MailOku/@item.ID" data-id="@item.ID">@item.AdSoyad</a></td>
                                                 <td class="mailbox-subject">
                                                     @item.Konu
                                                 </td>
@@ -100,7 +100,7 @@
                                                 <td class="mailbox-date">@item.Tarih</td>
 
                                             </tr>
-                                         }
+                                        }
                                     </tbody>
                                 </table>
                             </div>

@@ -10,17 +10,17 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="KullaniciAdi" Type="varchar" MaxLength="20" />
-          <Property Name="Sifre" Type="varchar" MaxLength="20" />
+          <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tblDeneyimlerim">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Baslik" Type="varchar" MaxLength="100" />
-          <Property Name="AltBaslik" Type="varchar" MaxLength="100" />
-          <Property Name="Aciklama" Type="varchar(max)" />
+          <Property Name="Baslik" Type="nvarchar" MaxLength="100" />
+          <Property Name="AltBaslik" Type="nvarchar" MaxLength="100" />
+          <Property Name="Aciklama" Type="nvarchar(max)" />
           <Property Name="Tarih" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="tblEgitimlerim">
@@ -28,9 +28,9 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Baslik" Type="varchar" MaxLength="100" />
-          <Property Name="AltBaslik1" Type="varchar" MaxLength="100" />
-          <Property Name="AltBaslik2" Type="varchar" MaxLength="100" />
+          <Property Name="Baslik" Type="nvarchar" MaxLength="100" />
+          <Property Name="AltBaslik1" Type="nvarchar" MaxLength="100" />
+          <Property Name="AltBaslik2" Type="nvarchar" MaxLength="100" />
           <Property Name="GNO" Type="varchar" MaxLength="10" />
           <Property Name="Tarih" Type="varchar" MaxLength="100" />
         </EntityType>
@@ -39,12 +39,12 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ad" Type="varchar" MaxLength="30" />
-          <Property Name="Soyad" Type="varchar" MaxLength="30" />
-          <Property Name="Adres" Type="varchar" MaxLength="100" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Soyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="100" />
           <Property Name="Telefon" Type="varchar" MaxLength="20" />
-          <Property Name="Mail" Type="varchar" MaxLength="50" />
-          <Property Name="Aciklama" Type="varchar(max)" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="nvarchar(max)" />
           <Property Name="Resim" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="tblIletisim">
@@ -52,10 +52,10 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AdSoyad" Type="varchar" MaxLength="100" />
-          <Property Name="Mail" Type="varchar" MaxLength="50" />
-          <Property Name="Konu" Type="varchar" MaxLength="100" />
-          <Property Name="Mesaj" Type="varchar" MaxLength="100" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Konu" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mesaj" Type="nvarchar" MaxLength="100" />
           <Property Name="Tarih" Type="date" />
         </EntityType>
         <EntityType Name="tblProjelerim">
@@ -63,18 +63,18 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ProjeAdi" Type="varchar" MaxLength="30" />
-          <Property Name="Teknolojiler" Type="varchar" MaxLength="100" />
-          <Property Name="Link" Type="varchar(max)" />
+          <Property Name="ProjeAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Teknolojiler" Type="nvarchar" MaxLength="100" />
+          <Property Name="Link" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="tblReferanslarim">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AdSoyad" Type="varchar" MaxLength="50" />
-          <Property Name="Mail" Type="varchar" MaxLength="100" />
-          <Property Name="Aciklama" Type="varchar(max)" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="100" />
+          <Property Name="Aciklama" Type="nvarchar(max)" />
           <Property Name="Resim" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="tblSertifikalarim">
@@ -82,7 +82,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Aciklama" Type="varchar" MaxLength="250" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="250" />
           <Property Name="Tarih" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="tblSosyalMedya">
@@ -90,8 +90,8 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Adi" Type="varchar" MaxLength="50" />
-          <Property Name="Link" Type="varchar(max)" />
+          <Property Name="Adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="Link" Type="nvarchar(max)" />
           <Property Name="Ikon" Type="varchar" MaxLength="50" />
           <Property Name="Durum" Type="bit" />
         </EntityType>
@@ -100,7 +100,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Yetenek" Type="varchar" MaxLength="100" />
+          <Property Name="Yetenek" Type="nvarchar" MaxLength="100" />
           <Property Name="Oran" Type="tinyint" />
         </EntityType>
         <EntityContainer Name="dbModelStoreContainer">
@@ -124,17 +124,17 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KullaniciAdi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tblDeneyimlerim">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="AltBaslik" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AltBaslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Tarih" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblEgitimlerim">
@@ -142,9 +142,9 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="AltBaslik1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="AltBaslik2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AltBaslik1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AltBaslik2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="GNO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Tarih" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -153,12 +153,12 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Soyad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Adres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblIletisim">
@@ -166,10 +166,10 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Konu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Mesaj" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Konu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mesaj" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Tarih" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="tblSertifikalarim">
@@ -177,7 +177,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Tarih" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblYeteneklerim">
@@ -185,7 +185,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Yetenek" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Yetenek" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Oran" Type="Byte" />
         </EntityType>
         <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true">
@@ -205,18 +205,18 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Teknolojiler" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="ProjeAdi" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Teknolojiler" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProjeAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tblReferanslarim">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblSosyalMedya">
@@ -224,8 +224,8 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Ikon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Durum" Type="Boolean" />
         </EntityType>

@@ -16,7 +16,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
     <link rel="stylesheet" href="~/IletisimDesign/dist/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+    <script src="~/Scripts/derece.js"></script>
 </head>
 
 <body>
@@ -25,13 +25,13 @@
         <div style="margin-top:5rem;" class="resume-section-content">
 
             <div class="field" tabindex="1">
-                <label for="Yetenek">
+                <label for="Yetenek"><i class="fa fa-magic"></i>
                     Yetenek
                 </label>
                 <input name="Yetenek" type="text" class="form-control" value="@Model.Yetenek" required></input>
             </div>
             <div class="field" tabindex="2">
-                <label for="Oran">
+                <label for="Oran"><i class="fa fa-percent"></i>
                     Derece
                 </label>
                 <input oninput="validateNumber(this);" name="Oran" type="text" class="form-control" value="@Model.Oran" required></input>
