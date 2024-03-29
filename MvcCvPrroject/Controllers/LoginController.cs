@@ -11,6 +11,7 @@ namespace MvcCvPrroject.Controllers
     [AllowAnonymous]
     public class LoginController : Controller
     {
+        
         // GET: Login
         [HttpGet]
         public ActionResult Index()
@@ -26,7 +27,7 @@ namespace MvcCvPrroject.Controllers
             {
                 FormsAuthentication.SetAuthCookie(bilgi.KullaniciAdi, false);
                 Session["KullaniciAdi"] = bilgi.KullaniciAdi.ToString();
-                return RedirectToAction("Index", "Egitimler");
+                return RedirectToAction("Index", "Hakkimda");
             }
             else
             {
