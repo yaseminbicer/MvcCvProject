@@ -23,6 +23,7 @@ MvcCv, ASP.NET Framework MVC kullanılarak geliştirilmiş bir web uygulamasıd�
 
 ## Ekran Görüntüleri
 <img width="956" alt="Ekran Alıentısı" src="MvcCvPrroject/assets/Ekran görüntüsü 2024-04-02 150542.png">
+<img width="956" alt="Ekran Alıentısı" src="MvcCvPrroject/assets/Ekran görüntüsü 2024-04-01 130217.png">
 <img width="921" alt="Ekran wqAlıntısı" src="MvcCvPrroject/assets/Ekran görüntüsü 2024-04-02 150025.png">
 <img width="941" alt="Ekran Alıntwısı" src="MvcCvPrroject/assets/Ekran görüntüsü 2024-04-02 150043.png">
 <img width="945" alt="Ekran weAlıntısı" src="MvcCvPrroject/assets/Ekran görüntüsü 2024-04-02 150101.png">
