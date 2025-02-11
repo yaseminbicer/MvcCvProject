@@ -22,7 +22,7 @@ MvcCv, ASP.NET Framework MVC kullanılarak geliştirilmiş bir web uygulamasıd�
 3. Admin paneli üzerinden CV bilgilerini ekleyebilir, silebilir ve güncelleyebilirsiniz.
 
 ## Ekran Görüntüleri
-<img width="956" alt="Ekran Alıentısı" src="Ekran görüntüsü 2024-04-02 150542-2.jpeg">
+<img width="956" alt="Ekran Alıentısı" src="MvcCvPrroject/assets/Ekran görüntüsü 2024-04-02 150542-2.jpeg">
 <img width="956" alt="Ekran Alıentısı" src="MvcCvPrroject/assets/Ekran görüntüsü 2024-04-01 130217.png">
 <img width="956" alt="Ekran Alıentısı" src="MvcCvPrroject/assets/Ekran görüntüsü 2024-04-02 160643.png">
 <img width="921" alt="Ekran wqAlıntısı" src="MvcCvPrroject/assets/Ekran görüntüsü 2024-04-02 150025.png">
